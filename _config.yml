@@ -1,0 +1,67 @@
+title: "Sbobinator"
+description: "Trascrizione audio e video in italiano in locale con NVIDIA NeMo Parakeet. Web UI, coda job e riassunto LLM opzionale."
+baseurl: ""
+url: "https://sbobinator.github.io"
+
+author:
+  name: "Antonio Trento"
+  email: "info@antoniotrento.net"
+  bio: "Local AI & Automation"
+
+og_image: "/assets/images/logo/logo-transparent.png"
+
+paginate: 20
+paginate_path: "/blog/page:num"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+
+faq:
+  - question: "Quali formati supporta Sbobinator?"
+    answer: "Audio e video comuni: MP4, MKV, MOV, WAV, MP3, M4A e altri. L'audio viene estratto automaticamente da ffmpeg."
+  - question: "Serve Internet per la trascrizione?"
+    answer: "No. Il modello ASR NeMo Parakeet gira in locale. Internet serve solo se scegli un provider cloud per il riassunto LLM."
+  - question: "Posso usare Sbobinator senza Docker?"
+    answer: "Sì. Su Windows puoi installare con scripts/install_local.py e avviare la Web UI con start.bat."
+  - question: "Come funziona il riassunto?"
+    answer: "È opzionale: DeepSeek, OpenAI, Claude, Gemini, Kimi via API, oppure Qwen in locale se hai RAM sufficiente."
+  - question: "È software open source?"
+    answer: "Licenza proprietaria Antonio Trento: gratuita per uso personale e non commerciale; licenza commerciale per uso aziendale."
+
+social:
+  github: "https://github.com/sbobinator/sbobinator"
+  twitter: "https://x.com/antoniotrento"
+
+cta:
+  github_url: "https://github.com/sbobinator/sbobinator"
+  docs_url: "https://sbobinator.github.io/docs"
+
+popup:
+  url: "https://github.com/sbobinator/sbobinator"
+  en:
+    title: "Discover Sbobinator"
+    body: "Local Italian transcription with NeMo Parakeet, job queue, and optional LLM summaries."
+    button: "View on GitHub"
+  it:
+    title: "Scopri Sbobinator"
+    body: "Trascrizione italiana in locale con NeMo Parakeet, coda job e riassunto LLM opzionale."
+    button: "Vai su GitHub"
+
+permalink: "/:categories/:title/"
+markdown: kramdown
+highlighter: rouge
+
+include:
+  - assets
+  - robots.txt
+
+keywords:
+  - trascrizione audio
+  - speech to text italiano
+  - nemo parakeet
+  - trascrizione video
+  - whisper alternative
+  - local asr
+  - riassunto llm

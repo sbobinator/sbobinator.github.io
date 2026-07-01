@@ -1,0 +1,43 @@
+---
+layout: default
+title: "Funzionalità - Sbobinator"
+lang: it
+permalink: /it/strategies/
+---
+
+<section class="relative pt-32 pb-20 overflow-hidden bg-brand-dark border-b border-white/10 bg-grid-pattern">
+    <div class="absolute inset-0 bg-brand-dark/90 transition-colors"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-green-500/10 border border-green-500/30 text-green-500 text-xs font-mono font-bold uppercase mb-6">
+            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+            MODULI PRODOTTO
+        </div>
+        <h1 class="text-6xl lg:text-7xl font-black font-display mb-6 text-white uppercase tracking-tighter">Funzionalità<br><span class="text-brand-purple">Principali.</span></h1>
+        <p class="text-xl text-gray-400 mb-12 font-mono text-sm max-w-2xl mx-auto">
+            Trascrizione, export, storico job e riassunti LLM opzionali — un unico flusso operativo.
+        </p>
+    </div>
+</section>
+
+<section class="py-24 px-6 bg-white dark:bg-[#0a0a0a] border-b border-gray-200 dark:border-white/10">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
+        <div class="card-glow p-10 bg-gray-50 dark:bg-[#111] border border-gray-200 dark:border-white/10">
+            <h2 class="text-2xl font-black font-display uppercase mb-4 text-gray-900 dark:text-white">Web UI</h2>
+            <p class="text-gray-500 font-mono text-sm leading-relaxed">Carica file, segui l'avanzamento, scarica TXT/SRT, configura i provider di riassunto, gestisci l'accettazione licenza.</p>
+        </div>
+        <div class="card-glow p-10 bg-gray-50 dark:bg-[#111] border border-gray-200 dark:border-white/10">
+            <h2 class="text-2xl font-black font-display uppercase mb-4 text-gray-900 dark:text-white">CLI</h2>
+            <p class="text-gray-500 font-mono text-sm leading-relaxed"><code>sbobina transcribe</code>, <code>sbobina ui</code>, adatto a script e automazione.</p>
+        </div>
+        <div class="card-glow p-10 bg-gray-50 dark:bg-[#111] border border-gray-200 dark:border-white/10">
+            <h2 class="text-2xl font-black font-display uppercase mb-4 text-gray-900 dark:text-white">Docker</h2>
+            <p class="text-gray-500 font-mono text-sm leading-relaxed">UI + worker in Compose per mini PC Linux. Mapping predefinito <code>8502:8501</code>.</p>
+        </div>
+        <div class="card-glow p-10 bg-gray-50 dark:bg-[#111] border border-gray-200 dark:border-white/10">
+            <h2 class="text-2xl font-black font-display uppercase mb-4 text-gray-900 dark:text-white">Riassunti</h2>
+            <p class="text-gray-500 font-mono text-sm leading-relaxed">API cloud o Qwen locale. Modalità dettagliata ed executive. Sempre opzionale.</p>
+        </div>
+    </div>
+</section>
+
+{% include post-cta.html %}

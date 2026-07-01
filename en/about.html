@@ -1,0 +1,60 @@
+---
+layout: default
+title: "About Sbobinator"
+lang: en
+permalink: /en/about/
+---
+
+<section class="relative pt-32 pb-20 overflow-hidden bg-grid-pattern border-b border-gray-200 dark:border-white/10">
+    <div class="absolute inset-0 bg-white/90 dark:bg-brand-dark/90 transition-colors"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-purple/10 border-l-2 border-brand-purple text-brand-purple text-xs font-mono font-bold uppercase mb-6">
+                PROJECT // SBOBINATOR
+            </div>
+            <h1 class="text-6xl font-black font-display mb-6 text-gray-900 dark:text-white uppercase tracking-tighter">Local<br><span class="text-brand-pink">Transcription.</span></h1>
+            <p class="text-xl text-gray-600 dark:text-gray-400 mb-8 font-mono text-sm leading-relaxed border-l border-gray-200 dark:border-white/10 pl-4">
+                Sbobinator was built for Italian speech workloads: meetings, interviews, podcasts, and video archives — processed on your own machine with NeMo Parakeet and a practical operator UI.
+            </p>
+        </div>
+        <div class="bg-[#0a0a0a] rounded-lg border border-brand-pink/30 p-6 shadow-2xl font-mono text-xs text-gray-400">
+            <div class="flex gap-2 mb-4 border-b border-white/10 pb-2">
+                <span class="text-brand-purple">➜</span> <span>sbobina info</span>
+            </div>
+            <div class="space-y-1">
+                <div>[OK] ASR: nvidia/parakeet-tdt-0.6b-v3</div>
+                <div>[OK] UI: FastAPI + HTMX</div>
+                <div>[OK] Worker: background queue</div>
+                <div class="text-brand-pink mt-2">> Optional LLM summary providers loaded</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-32 px-6 bg-white dark:bg-[#0a0a0a] transition-colors relative">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-20">
+            <h2 class="text-sm font-mono text-gray-500 font-bold uppercase tracking-widest mb-4">Why</h2>
+            <h3 class="text-4xl lg:text-5xl font-black font-display text-gray-900 dark:text-white uppercase tracking-tight">Built for Operators</h3>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="card-glow p-8 bg-gray-50 dark:bg-[#111] border border-gray-200 dark:border-white/10">
+                <div class="text-brand-purple text-2xl mb-4 font-black font-mono">01</div>
+                <h4 class="text-xl font-bold font-display text-gray-900 dark:text-white mb-2 uppercase">Italian First</h4>
+                <p class="text-sm text-gray-500 font-mono leading-relaxed">Parakeet v3 tuned for multilingual ASR with Italian as the primary use case.</p>
+            </div>
+            <div class="card-glow p-8 bg-gray-50 dark:bg-[#111] border border-gray-200 dark:border-white/10">
+                <div class="text-brand-pink text-2xl mb-4 font-black font-mono">02</div>
+                <h4 class="text-xl font-bold font-display text-gray-900 dark:text-white mb-2 uppercase">Queue UX</h4>
+                <p class="text-sm text-gray-500 font-mono leading-relaxed">Not a one-shot demo: upload, walk away, revisit job history, reprocess, export.</p>
+            </div>
+            <div class="card-glow p-8 bg-gray-50 dark:bg-[#111] border border-gray-200 dark:border-white/10">
+                <div class="text-green-500 text-2xl mb-4 font-black font-mono">03</div>
+                <h4 class="text-xl font-bold font-display text-gray-900 dark:text-white mb-2 uppercase">Deployable</h4>
+                <p class="text-sm text-gray-500 font-mono leading-relaxed">Windows dev install or Docker on a home mini PC at <code class="text-brand-purple">localhost:8502</code>.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include post-cta.html %}
