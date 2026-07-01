@@ -1,9 +1,9 @@
 ---
 layout: default
-title: "Sbobinator — Italian Audio & Video Transcription"
+title: "Sbobinator — Trascrizione Audio e Video in Italiano"
 lang: en
 locale: en_US
-description: "Sbobinator transcribes Italian audio and video locally with NVIDIA NeMo Parakeet. FastAPI web UI, job queue, and optional LLM summaries."
+description: "Turn Italian meetings, podcasts, and videos into text and subtitles on your PC. Private, no per-minute fees, free for personal use."
 ---
 
 <section class="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-grid-pattern">
@@ -14,45 +14,43 @@ description: "Sbobinator transcribes Italian audio and video locally with NVIDIA
             <div
                 class="inline-flex items-center gap-2 px-4 py-2 rounded-none bg-brand-purple/10 border-l-4 border-brand-purple text-xs font-mono tracking-widest uppercase mb-8 text-brand-purple dark:text-brand-purpleLight">
                 <span class="w-2 h-2 rounded-none bg-brand-purple animate-pulse"></span>
-                SYS.INIT // parakeet-v3
+                Meetings · Podcasts · Video
             </div>
             <h1 class="text-6xl lg:text-7xl font-black leading-[0.95] mb-6 font-display text-gray-900 dark:text-white uppercase tracking-tighter">
-                Speech <br>
-                <span class="text-brand-purple">To Text.</span><br>
-                <span class="text-brand-pink">Local.</span>
+                Your Recordings,<br>
+                <span class="text-brand-purple">Readable Text.</span><br>
+                <span class="text-brand-pink">On Your PC.</span>
             </h1>
-            <p class="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-xl font-mono text-sm leading-relaxed border-l border-gray-300 dark:border-white/10 pl-4">
-                > Your meetings, interviews, and podcasts stay on your machine.<br>
-                > NeMo Parakeet ASR — Italian-first, no mandatory cloud upload.<br>
-                > Queue jobs, revisit history, export SRT — summaries only if you opt in.
+            <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-xl leading-relaxed">
+                Sbobinator turns Italian audio and video into <strong>searchable transcripts and subtitles</strong> — without sending files to Google, Otter, or paid cloud services. Ideal for meetings, interviews, podcasts, lessons, and personal archives.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
                 <a href="https://github.com/sbobinator/sbobinator" target="_blank" rel="noopener"
                     class="flex items-center justify-center gap-2 px-8 py-4 bg-gray-900 dark:bg-white text-white dark:text-black font-bold font-mono text-sm hover:bg-brand-purple dark:hover:bg-brand-purple dark:hover:text-white transition-colors border border-transparent">
-                    <i class="fab fa-github"></i> [ RUN CLONE ]
+                    <i class="fab fa-github"></i> Get Started Free
                 </a>
-                <a href="#architecture"
+                <a href="#how-it-works"
                     class="flex items-center justify-center gap-2 px-8 py-4 border border-gray-300 dark:border-white/20 font-bold font-mono text-sm hover:bg-gray-100 dark:hover:bg-white/5 transition-colors text-gray-800 dark:text-white">
-                    EXPLORE.PIPELINE <i class="fas fa-arrow-down text-xs"></i>
+                    How It Works <i class="fas fa-arrow-down text-xs"></i>
                 </a>
             </div>
 
-            <div class="mt-12 pt-8 border-t border-gray-200 dark:border-white/10 grid grid-cols-2 md:grid-cols-4 gap-4 font-mono text-xs text-gray-500 uppercase">
+            <div class="mt-12 pt-8 border-t border-gray-200 dark:border-white/10 grid grid-cols-2 md:grid-cols-4 gap-4 text-xs text-gray-500 uppercase">
                 <div>
-                    <div class="text-brand-purple font-bold text-lg mb-1">IT</div>
-                    <div>Primary Lang</div>
+                    <div class="text-brand-purple font-bold text-lg mb-1 font-mono">€0</div>
+                    <div>Personal use</div>
                 </div>
                 <div>
-                    <div class="text-brand-pink font-bold text-lg mb-1">0</div>
-                    <div>Cloud ASR</div>
+                    <div class="text-brand-pink font-bold text-lg mb-1 font-mono">IT</div>
+                    <div>Italian-first</div>
                 </div>
                 <div>
-                    <div class="text-gray-900 dark:text-white font-bold text-lg mb-1">SRT</div>
-                    <div>Subtitles</div>
+                    <div class="text-gray-900 dark:text-white font-bold text-lg mb-1 font-mono">Private</div>
+                    <div>Stays on disk</div>
                 </div>
                 <div>
-                    <div class="text-green-500 font-bold text-lg mb-1">LLM</div>
-                    <div>Optional</div>
+                    <div class="text-green-500 font-bold text-lg mb-1 font-mono">SRT</div>
+                    <div>Subtitles too</div>
                 </div>
             </div>
         </div>
@@ -65,48 +63,49 @@ description: "Sbobinator transcribes Italian audio and video locally with NVIDIA
                         <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
                         <div class="w-3 h-3 rounded-full bg-green-500"></div>
                     </div>
-                    <div class="text-gray-500">root@sbobinator:~/worker</div>
+                    <div class="text-gray-500">sbobinator — web app</div>
                 </div>
                 <div class="p-4 space-y-2 text-gray-300 h-[400px] overflow-hidden flex flex-col justify-end relative">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent z-10 pointer-events-none"></div>
-                    <div class="opacity-30"> [INFO] Job #42 queued: riunione_board.mp4</div>
-                    <div class="opacity-40"> [INFO] ffmpeg extract audio → 48kHz mono WAV</div>
-                    <div class="opacity-50"> [ASR] Loading NeMo Parakeet TDT 0.6B...</div>
-                    <div class="opacity-60"> [ASR] Transcribing chunk 12/28 (italiano)</div>
-                    <div class="opacity-80"> [OK] transcript.txt written (14,203 words)</div>
-                    <div class="text-brand-purpleLight"> [EXP] Export SRT + VTT segments</div>
-                    <div class="text-green-400"> [OK] Job completed in 8m 14s</div>
-                    <div class="text-brand-pink"> [LLM] Summary skipped (provider=none)</div>
+                    <div class="opacity-30"> Upload: riunione_team_zoom.mp4</div>
+                    <div class="opacity-40"> Extracting audio from video…</div>
+                    <div class="opacity-50"> Transcribing in Italian (45 min recording)</div>
+                    <div class="opacity-60"> Progress: 68% — you can close this tab</div>
+                    <div class="opacity-80"> Done: transcript ready to read</div>
+                    <div class="text-brand-purpleLight"> Export: subtitles.srt for your editor</div>
+                    <div class="text-green-400"> Saved on your computer — not in the cloud</div>
+                    <div class="text-brand-pink"> Summary: skipped (optional feature)</div>
                     <div class="text-gray-400 mt-4 flex items-center gap-2">
                         <span class="text-brand-purple">➜</span>
-                        <span class="typing-animation border-r-2 border-brand-purple pr-1 animate-pulse">tail -f data/logs/worker.log</span>
+                        <span class="typing-animation border-r-2 border-brand-purple pr-1 animate-pulse">Download your files</span>
                     </div>
                 </div>
             </div>
             <div class="absolute -right-8 top-1/4 bg-white dark:bg-brand-dark border border-gray-200 dark:border-white/10 p-4 rounded shadow-xl hidden md:block">
-                <div class="text-[10px] text-gray-500 uppercase font-mono mb-1">Queue</div>
-                <div class="text-xl font-bold font-display text-green-500">1 done <i class="fas fa-check text-sm"></i></div>
+                <div class="text-[10px] text-gray-500 uppercase font-mono mb-1">Typical use</div>
+                <div class="text-sm font-bold font-mono text-brand-purple">2h meeting → text</div>
             </div>
             <div class="absolute -left-8 bottom-1/4 bg-white dark:bg-brand-dark border border-gray-200 dark:border-white/10 p-4 rounded shadow-xl hidden md:block">
-                <div class="text-[10px] text-gray-500 uppercase font-mono mb-1">Model</div>
-                <div class="text-sm font-bold font-mono text-brand-purple">Parakeet v3</div>
+                <div class="text-[10px] text-gray-500 uppercase font-mono mb-1">Privacy</div>
+                <div class="text-sm font-bold font-mono text-green-500">No cloud upload</div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="py-4 px-6 bg-yellow-500/10 border-y border-yellow-500/30 font-mono text-xs">
+<section class="py-4 px-6 bg-yellow-500/10 border-y border-yellow-500/30 text-xs">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-4 text-center">
-        <span class="text-yellow-600 dark:text-yellow-400 font-bold">LICENSE_NOTICE:</span>
-        <span class="text-gray-600 dark:text-gray-400">Free for personal and non-commercial use. Commercial deployment requires a license from Antonio Trento.</span>
+        <span class="text-yellow-600 dark:text-yellow-400 font-bold font-mono">LICENSE:</span>
+        <span class="text-gray-600 dark:text-gray-400">Free for personal and non-commercial use. Businesses need a commercial license — see docs.</span>
     </div>
 </section>
 
-<section id="architecture" class="py-32 px-6 bg-gray-50 dark:bg-brand-surface border-b border-gray-200 dark:border-white/5 transition-colors">
+<section id="how-it-works" class="py-32 px-6 bg-gray-50 dark:bg-brand-surface border-b border-gray-200 dark:border-white/5 transition-colors">
     <div class="max-w-7xl mx-auto">
         <div class="mb-20">
-            <h2 class="text-sm font-mono text-brand-purple font-bold uppercase tracking-widest mb-4">01. Pipeline</h2>
-            <h3 class="text-4xl lg:text-5xl font-black font-display text-gray-900 dark:text-white uppercase tracking-tight">Processing Flow</h3>
+            <h2 class="text-sm font-mono text-brand-purple font-bold uppercase tracking-widest mb-4">01. How It Works</h2>
+            <h3 class="text-4xl lg:text-5xl font-black font-display text-gray-900 dark:text-white uppercase tracking-tight">Four Simple Steps</h3>
+            <p class="text-gray-500 mt-4 max-w-2xl">No subscription. Install once, open the web app in your browser, and turn recordings into files you can search, quote, and subtitle.</p>
             <div class="w-20 h-1 bg-brand-purple mt-6"></div>
         </div>
 
@@ -114,41 +113,41 @@ description: "Sbobinator transcribes Italian audio and video locally with NVIDIA
             <div class="card-glow bg-white dark:bg-[#111] p-8 border border-gray-200 dark:border-white/10 relative">
                 <div class="text-4xl text-gray-200 dark:text-white/5 font-black absolute top-4 right-4 font-mono">01</div>
                 <div class="text-brand-purple mb-6"><i class="fas fa-upload text-3xl"></i></div>
-                <h4 class="text-lg font-bold font-mono text-gray-900 dark:text-white mb-3">Upload</h4>
+                <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-3">Upload</h4>
                 <p class="text-sm text-gray-500 leading-relaxed mb-4">
-                    Drop MP4, MKV, WAV, MP3 and more via the FastAPI web UI or CLI. Jobs are tracked in SQLite with live progress.
+                    Drop a meeting recording, podcast episode, interview, or any MP4, MKV, WAV, MP3 file. Upload several at once if you need to.
                 </p>
-                <div class="text-[10px] font-mono text-gray-400 bg-gray-100 dark:bg-black p-2">FastAPI / HTMX / SQLite</div>
+                <div class="text-[10px] font-mono text-gray-400 bg-gray-100 dark:bg-black p-2">From browser or drag & drop</div>
             </div>
 
             <div class="card-glow bg-white dark:bg-[#111] p-8 border border-gray-200 dark:border-white/10 relative">
                 <div class="text-4xl text-gray-200 dark:text-white/5 font-black absolute top-4 right-4 font-mono">02</div>
-                <div class="text-brand-pink mb-6"><i class="fas fa-wave-square text-3xl"></i></div>
-                <h4 class="text-lg font-bold font-mono text-gray-900 dark:text-white mb-3">Extract</h4>
+                <div class="text-brand-pink mb-6"><i class="fas fa-hourglass-half text-3xl"></i></div>
+                <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-3">Wait (or walk away)</h4>
                 <p class="text-sm text-gray-500 leading-relaxed mb-4">
-                    ffmpeg normalizes audio from video containers. Long files are chunked for stable GPU/CPU transcription.
+                    Sbobinator works in the background. Long files are handled automatically. Close the browser — your job keeps running.
                 </p>
-                <div class="text-[10px] font-mono text-gray-400 bg-gray-100 dark:bg-black p-2">ffmpeg / pydub</div>
+                <div class="text-[10px] font-mono text-gray-400 bg-gray-100 dark:bg-black p-2">Progress visible anytime</div>
             </div>
 
             <div class="card-glow bg-white dark:bg-[#111] p-8 border border-gray-200 dark:border-white/10 relative">
                 <div class="text-4xl text-gray-200 dark:text-white/5 font-black absolute top-4 right-4 font-mono">03</div>
                 <div class="text-green-500 mb-6"><i class="fas fa-microphone text-3xl"></i></div>
-                <h4 class="text-lg font-bold font-mono text-gray-900 dark:text-white mb-3">Transcribe</h4>
+                <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-3">Transcribe</h4>
                 <p class="text-sm text-gray-500 leading-relaxed mb-4">
-                    NVIDIA NeMo Parakeet TDT 0.6B v3 runs locally for Italian speech recognition with timestamped segments.
+                    A dedicated Italian speech engine runs on your PC — not on someone else's server. Quality tuned for real spoken Italian.
                 </p>
-                <div class="text-[10px] font-mono text-gray-400 bg-gray-100 dark:bg-black p-2">NeMo / CUDA or CPU</div>
+                <div class="text-[10px] font-mono text-gray-400 bg-gray-100 dark:bg-black p-2">Works offline after setup</div>
             </div>
 
             <div class="card-glow bg-white dark:bg-[#111] p-8 border border-gray-200 dark:border-white/10 relative">
                 <div class="text-4xl text-gray-200 dark:text-white/5 font-black absolute top-4 right-4 font-mono">04</div>
                 <div class="text-brand-gold mb-6"><i class="fas fa-file-export text-3xl"></i></div>
-                <h4 class="text-lg font-bold font-mono text-gray-900 dark:text-white mb-3">Export</h4>
+                <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-3">Download</h4>
                 <p class="text-sm text-gray-500 leading-relaxed mb-4">
-                    Download TXT, SRT, and optional LLM summaries. Reprocess or delete jobs from the history UI.
+                    Get a plain-text transcript to read and search, plus SRT subtitles for Premiere, DaVinci, or YouTube. Add an AI summary only if you want one.
                 </p>
-                <div class="text-[10px] font-mono text-gray-400 bg-gray-100 dark:bg-black p-2">DeepSeek / OpenAI / Qwen</div>
+                <div class="text-[10px] font-mono text-gray-400 bg-gray-100 dark:bg-black p-2">TXT · SRT · optional summary</div>
             </div>
         </div>
     </div>
@@ -158,43 +157,43 @@ description: "Sbobinator transcribes Italian audio and video locally with NVIDIA
     <div class="absolute inset-0 bg-white/80 dark:bg-brand-dark/80"></div>
     <div class="max-w-7xl mx-auto relative z-10">
         <div class="mb-20 text-center">
-            <h2 class="text-sm font-mono text-brand-purple font-bold uppercase tracking-widest mb-4">02. Modules</h2>
-            <h3 class="text-4xl lg:text-5xl font-black font-display text-gray-900 dark:text-white uppercase tracking-tight">Core Features</h3>
-            <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Three modules — durable job queue, local Parakeet ASR, optional LLM summaries — plus Docker for always-on mini-PC deployment.</p>
+            <h2 class="text-sm font-mono text-brand-purple font-bold uppercase tracking-widest mb-4">02. Use Cases</h2>
+            <h3 class="text-4xl lg:text-5xl font-black font-display text-gray-900 dark:text-white uppercase tracking-tight">Built For Real Work</h3>
+            <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Whether you record once a week or process a backlog of files, Sbobinator saves hours of manual typing and keeps sensitive content off the internet.</p>
         </div>
 
         <div class="space-y-12">
             <div class="grid lg:grid-cols-2 gap-0 border border-gray-200 dark:border-white/10 bg-white dark:bg-[#0a0a0a]">
                 <div class="p-10 border-b lg:border-b-0 lg:border-r border-gray-200 dark:border-white/10">
-                    <div class="inline-block px-3 py-1 bg-brand-purple/20 text-brand-purple font-mono text-xs font-bold mb-4">MOD_01</div>
-                    <h4 class="text-3xl font-black font-display text-gray-900 dark:text-white uppercase mb-4">Job Queue</h4>
+                    <div class="inline-block px-3 py-1 bg-brand-purple/20 text-brand-purple font-mono text-xs font-bold mb-4">MEETINGS</div>
+                    <h4 class="text-3xl font-black font-display text-gray-900 dark:text-white uppercase mb-4">Calls & Workshops</h4>
                     <p class="text-gray-500 mb-6 leading-relaxed">
-                        Upload multiple files, track status live, open each job detail page, reconcile disk state, reprocess or delete entries. Built for long recordings and batch workflows.
+                        Turn a 90-minute Teams or Zoom recording into text you can skim, search, and share internally. No more rewinding to find who said what — and no uploading confidential discussions to a third-party SaaS.
                     </p>
-                    <ul class="space-y-2 font-mono text-sm text-gray-600 dark:text-gray-400">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> /jobs list + filters</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> /jobs/{id} live progress</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Disk ↔ DB reconcile</li>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Board meetings, client calls, training sessions</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> History of past transcriptions</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Optional executive summary for long sessions</li>
                     </ul>
                 </div>
                 <div class="p-10 flex flex-col justify-center bg-gray-50 dark:bg-[#111]">
-                    <h5 class="text-xs font-mono text-gray-500 uppercase tracking-widest mb-4">Typical Outputs</h5>
-                    <div class="space-y-4 font-mono">
+                    <h5 class="text-xs font-mono text-gray-500 uppercase tracking-widest mb-4">What you download</h5>
+                    <div class="space-y-4">
                         <div class="flex justify-between items-center border-b border-gray-200 dark:border-white/5 pb-2">
-                            <span class="text-gray-600 dark:text-gray-400">transcript.txt</span>
-                            <span class="text-green-500 font-bold">plain text</span>
+                            <span class="text-gray-600 dark:text-gray-400">Full transcript</span>
+                            <span class="text-green-500 font-bold">Read & search</span>
                         </div>
                         <div class="flex justify-between items-center border-b border-gray-200 dark:border-white/5 pb-2">
-                            <span class="text-gray-600 dark:text-gray-400">subtitles.srt</span>
-                            <span class="text-gray-900 dark:text-white font-bold">timed cues</span>
+                            <span class="text-gray-600 dark:text-gray-400">SRT subtitles</span>
+                            <span class="text-gray-900 dark:text-white font-bold">For video editors</span>
                         </div>
                         <div class="flex justify-between items-center border-b border-gray-200 dark:border-white/5 pb-2">
-                            <span class="text-gray-600 dark:text-gray-400">summary.md</span>
-                            <span class="text-gray-900 dark:text-white font-bold">optional</span>
+                            <span class="text-gray-600 dark:text-gray-400">AI summary</span>
+                            <span class="text-gray-900 dark:text-white font-bold">If you enable it</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <span class="text-gray-600 dark:text-gray-400">Docker port</span>
-                            <span class="text-gray-900 dark:text-white font-bold">8502 → UI</span>
+                            <span class="text-gray-600 dark:text-gray-400">vs. cloud services</span>
+                            <span class="text-brand-purple font-bold">No per-minute bill</span>
                         </div>
                     </div>
                 </div>
@@ -202,71 +201,71 @@ description: "Sbobinator transcribes Italian audio and video locally with NVIDIA
 
             <div class="grid lg:grid-cols-2 gap-0 border border-gray-200 dark:border-white/10 bg-white dark:bg-[#0a0a0a]">
                 <div class="p-10 flex flex-col justify-center bg-gray-50 dark:bg-[#111] order-2 lg:order-1">
-                    <h5 class="text-xs font-mono text-gray-500 uppercase tracking-widest mb-4">Summary Providers</h5>
-                    <div class="space-y-4 font-mono">
-                        <div class="flex justify-between items-center border-b border-gray-200 dark:border-white/5 pb-2">
-                            <span class="text-gray-600 dark:text-gray-400">Cloud APIs</span>
-                            <span class="text-green-500 font-bold">DeepSeek, OpenAI…</span>
+                    <h5 class="text-xs font-mono text-gray-500 uppercase tracking-widest mb-4">Also great for</h5>
+                    <div class="space-y-4 text-sm text-gray-600 dark:text-gray-400">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-podcast text-brand-pink mt-1"></i>
+                            <div><strong class="text-gray-900 dark:text-white">Podcasts & YouTube</strong> — generate subtitles and show notes from episode audio.</div>
                         </div>
-                        <div class="flex justify-between items-center border-b border-gray-200 dark:border-white/5 pb-2">
-                            <span class="text-gray-600 dark:text-gray-400">Local Qwen</span>
-                            <span class="text-gray-900 dark:text-white font-bold">offline</span>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-microphone text-brand-purple mt-1"></i>
+                            <div><strong class="text-gray-900 dark:text-white">Interviews & journalism</strong> — quote accurately without manual transcription.</div>
                         </div>
-                        <div class="flex justify-between items-center border-b border-gray-200 dark:border-white/5 pb-2">
-                            <span class="text-gray-600 dark:text-gray-400">RAM (local LLM)</span>
-                            <span class="text-gray-900 dark:text-white font-bold">≥ 16 GB</span>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-graduation-cap text-green-500 mt-1"></i>
+                            <div><strong class="text-gray-900 dark:text-white">Lectures & courses</strong> — convert long lessons into study material.</div>
                         </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-gray-600 dark:text-gray-400">ASR model size</span>
-                            <span class="text-gray-900 dark:text-white font-bold">~2.5 GB</span>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-folder text-brand-gold mt-1"></i>
+                            <div><strong class="text-gray-900 dark:text-white">Personal archives</strong> — digitize old recordings sitting on your drive.</div>
                         </div>
                     </div>
                 </div>
                 <div class="p-10 border-b lg:border-b-0 lg:border-l border-gray-200 dark:border-white/10 order-1 lg:order-2">
-                    <div class="inline-block px-3 py-1 bg-brand-pink/20 text-brand-pink font-mono text-xs font-bold mb-4">MOD_02</div>
-                    <h4 class="text-3xl font-black font-display text-gray-900 dark:text-white uppercase mb-4">LLM Summary</h4>
+                    <div class="inline-block px-3 py-1 bg-brand-pink/20 text-brand-pink font-mono text-xs font-bold mb-4">CREATORS</div>
+                    <h4 class="text-3xl font-black font-display text-gray-900 dark:text-white uppercase mb-4">Podcasts & Video</h4>
                     <p class="text-gray-500 mb-6 leading-relaxed">
-                        Summaries are strictly opt-in. Configure providers in the web UI, use cloud APIs for speed, or download Qwen for fully offline pipelines on capable hardware.
+                        Export timed SRT files ready for your editing workflow. Batch several episodes overnight on your own machine instead of paying per minute on a transcription website.
                     </p>
-                    <ul class="space-y-2 font-mono text-sm text-gray-600 dark:text-gray-400">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Provider registry</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Detailed vs executive modes</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Settings page /settings/summary</li>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Italian speech optimized</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Queue multiple episodes</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Works without sending files online</li>
                     </ul>
                 </div>
             </div>
 
             <div class="grid lg:grid-cols-2 gap-0 border border-gray-200 dark:border-white/10 bg-white dark:bg-[#0a0a0a]">
                 <div class="p-10 border-b lg:border-b-0 lg:border-r border-gray-200 dark:border-white/10">
-                    <div class="inline-block px-3 py-1 bg-green-500/20 text-green-500 font-mono text-xs font-bold mb-4">MOD_03</div>
-                    <h4 class="text-3xl font-black font-display text-gray-900 dark:text-white uppercase mb-4">Parakeet Engine</h4>
+                    <div class="inline-block px-3 py-1 bg-green-500/20 text-green-500 font-mono text-xs font-bold mb-4">OPTIONAL</div>
+                    <h4 class="text-3xl font-black font-display text-gray-900 dark:text-white uppercase mb-4">AI Summaries</h4>
                     <p class="text-gray-500 mb-6 leading-relaxed">
-                        The ASR core: NVIDIA NeMo Parakeet TDT 0.6B v3, ~2.5 GB download, Italian-first with EU multilingual support. ffmpeg extracts audio; long files are chunked and merged with boundary deduplication.
+                        Finished a two-hour meeting and only need the decisions? Turn on summaries in settings — use a cloud AI with your own API key, or a local model for full privacy. Transcription works fine without this step.
                     </p>
-                    <ul class="space-y-2 font-mono text-sm text-gray-600 dark:text-gray-400">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> CPU or CUDA inference</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Timestamped SRT export</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> CLI + worker pipeline</li>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Short recap or detailed notes</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Your choice of AI provider</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Completely optional — off by default</li>
                     </ul>
                 </div>
                 <div class="p-10 flex flex-col justify-center bg-gray-50 dark:bg-[#111]">
-                    <h5 class="text-xs font-mono text-gray-500 uppercase tracking-widest mb-4">Deploy Targets</h5>
-                    <div class="space-y-4 font-mono">
+                    <h5 class="text-xs font-mono text-gray-500 uppercase tracking-widest mb-4">Getting started</h5>
+                    <div class="space-y-4 text-sm">
                         <div class="flex justify-between items-center border-b border-gray-200 dark:border-white/5 pb-2">
-                            <span class="text-gray-600 dark:text-gray-400">Windows dev</span>
-                            <span class="text-green-500 font-bold">localhost:8501</span>
+                            <span class="text-gray-600 dark:text-gray-400">Windows PC</span>
+                            <span class="text-green-500 font-bold">Install & open browser</span>
                         </div>
                         <div class="flex justify-between items-center border-b border-gray-200 dark:border-white/5 pb-2">
-                            <span class="text-gray-600 dark:text-gray-400">Docker mini PC</span>
-                            <span class="text-gray-900 dark:text-white font-bold">8502:8501</span>
+                            <span class="text-gray-600 dark:text-gray-400">One-time setup</span>
+                            <span class="text-gray-900 dark:text-white font-bold">~2.5 GB model download</span>
                         </div>
                         <div class="flex justify-between items-center border-b border-gray-200 dark:border-white/5 pb-2">
-                            <span class="text-gray-600 dark:text-gray-400">Model cache</span>
-                            <span class="text-gray-900 dark:text-white font-bold">data/models/</span>
+                            <span class="text-gray-600 dark:text-gray-400">After that</span>
+                            <span class="text-gray-900 dark:text-white font-bold">Works offline</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <span class="text-gray-600 dark:text-gray-400">Commercial use</span>
-                            <span class="text-brand-pink font-bold">license required</span>
+                            <span class="text-gray-600 dark:text-gray-400">Personal use</span>
+                            <span class="text-brand-purple font-bold">Free</span>
                         </div>
                     </div>
                 </div>
@@ -280,30 +279,30 @@ description: "Sbobinator transcribes Italian audio and video locally with NVIDIA
         <div class="grid lg:grid-cols-2 gap-16 items-center">
             <div>
                 <h2 class="text-sm font-mono text-red-500 font-bold uppercase tracking-widest mb-4">03. Privacy</h2>
-                <h3 class="text-4xl lg:text-5xl font-black font-display uppercase tracking-tight mb-6">Local First</h3>
-                <p class="text-gray-400 mb-8 leading-relaxed font-mono text-sm border-l border-red-500/30 pl-4">
-                    Transcription stays on your machine. Cloud APIs are only invoked when you explicitly enable LLM summaries with your own keys.
+                <h3 class="text-4xl lg:text-5xl font-black font-display uppercase tracking-tight mb-6">Your Files Stay Yours</h3>
+                <p class="text-gray-400 mb-8 leading-relaxed text-sm border-l border-red-500/30 pl-4">
+                    Cloud transcription means sending voice recordings to someone else's servers. Sbobinator runs on your computer — so client calls, medical notes, legal interviews, and personal content never need to leave your desk.
                 </p>
                 <div class="space-y-6">
                     <div class="flex items-start gap-4">
                         <div class="mt-1 text-red-500"><i class="fas fa-lock"></i></div>
                         <div>
-                            <h4 class="font-bold font-mono text-lg mb-1">No Mandatory Cloud</h4>
-                            <p class="text-gray-500 text-sm">ASR does not phone home. Models are downloaded once and cached under your data directory.</p>
+                            <h4 class="font-bold text-lg mb-1">No upload for transcription</h4>
+                            <p class="text-gray-500 text-sm">The speech engine runs locally. After a one-time model download, you can transcribe without an internet connection.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-4">
-                        <div class="mt-1 text-red-500"><i class="fas fa-server"></i></div>
+                        <div class="mt-1 text-red-500"><i class="fas fa-home"></i></div>
                         <div>
-                            <h4 class="font-bold font-mono text-lg mb-1">Mini-PC Ready</h4>
-                            <p class="text-gray-500 text-sm">Docker Compose packages UI + worker for headless home-lab deployment on Linux.</p>
+                            <h4 class="font-bold text-lg mb-1">Install on your own PC</h4>
+                            <p class="text-gray-500 text-sm">Windows for everyday use, or a small home server if you want it always available on your network.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-4">
-                        <div class="mt-1 text-red-500"><i class="fas fa-balance-scale"></i></div>
+                        <div class="mt-1 text-red-500"><i class="fas fa-toggle-off"></i></div>
                         <div>
-                            <h4 class="font-bold font-mono text-lg mb-1">License Gate</h4>
-                            <p class="text-gray-500 text-sm">First-run acknowledgment for personal use. Commercial terms documented in LICENSE and MkDocs.</p>
+                            <h4 class="font-bold text-lg mb-1">AI summaries only if you switch them on</h4>
+                            <p class="text-gray-500 text-sm">Need a short recap? Enable summaries and pick your AI provider. Otherwise you get text and subtitles — nothing else.</p>
                         </div>
                     </div>
                 </div>
@@ -349,8 +348,8 @@ description: "Sbobinator transcribes Italian audio and video locally with NVIDIA
     <div class="max-w-4xl mx-auto">
         <div class="text-center mb-16">
             <h2 class="text-sm font-mono text-brand-purple font-bold uppercase tracking-widest mb-4">04. FAQ</h2>
-            <h3 class="text-4xl lg:text-5xl font-black font-display text-gray-900 dark:text-white uppercase tracking-tight">Common Questions</h3>
-            <p class="text-gray-500 mt-4 max-w-2xl mx-auto font-mono text-sm">Local-first philosophy, operator workflow, hardware, privacy, and licensing — answered upfront.</p>
+            <h3 class="text-4xl lg:text-5xl font-black font-display text-gray-900 dark:text-white uppercase tracking-tight">Questions Before You Install</h3>
+            <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Practical answers for home users, freelancers, and small teams — not developer documentation.</p>
         </div>
         {% include accordion-faq.html %}
         <p class="text-center mt-10 font-mono text-xs text-gray-500">
@@ -361,8 +360,8 @@ description: "Sbobinator transcribes Italian audio and video locally with NVIDIA
 
 <section class="py-32 px-6 bg-white dark:bg-brand-dark relative overflow-hidden transition-colors bg-grid-pattern">
     <div class="max-w-4xl mx-auto text-center relative z-10">
-        <h2 class="text-5xl lg:text-6xl font-black font-display mb-6 text-gray-900 dark:text-white uppercase tracking-tight">Start Transcribing.</h2>
-        <p class="text-xl text-gray-600 dark:text-gray-400 mb-10 font-mono">Windows install or Docker on a mini PC — then open the web UI and queue your first file.</p>
+        <h2 class="text-5xl lg:text-6xl font-black font-display mb-6 text-gray-900 dark:text-white uppercase tracking-tight">Try It On Your PC.</h2>
+        <p class="text-xl text-gray-600 dark:text-gray-400 mb-10">Free for personal use. Install in a few steps, open the app in your browser, upload your first recording.</p>
 
         <div class="bg-[#0a0a0a] border border-white/10 p-6 text-left code-block max-w-2xl mx-auto mb-10 shadow-2xl relative">
             <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-purple to-brand-pink"></div>
@@ -370,17 +369,17 @@ description: "Sbobinator transcribes Italian audio and video locally with NVIDIA
             <span class="cmd">cd</span> sbobinator<br>
             <span class="cmd">python</span> scripts/install_local.py<br>
             <span class="cmd">python</span> scripts/download_model.py<br>
-            <span class="cmd">start.bat</span> <span class="comment"># http://localhost:8501</span>
+            <span class="cmd">start.bat</span> <span class="comment"># then open http://localhost:8501</span>
         </div>
 
         <div class="flex justify-center gap-4 flex-wrap">
             <a href="https://github.com/sbobinator/sbobinator" target="_blank" rel="noopener"
                 class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gray-900 dark:bg-white text-white dark:text-black font-bold font-mono hover:bg-brand-purple transition-colors">
-                <i class="fab fa-github"></i> GITHUB_REPO
+                <i class="fab fa-github"></i> Download Free
             </a>
-            <a href="/docs/" target="_blank" rel="noopener"
+            <a href="/docs/getting-started/quickstart/" target="_blank" rel="noopener"
                 class="inline-flex items-center justify-center gap-2 px-8 py-4 border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white font-bold font-mono hover:bg-gray-100 dark:hover:bg-[#111] transition-colors">
-                <i class="fas fa-book"></i> READ_DOCS
+                <i class="fas fa-book"></i> Step-by-Step Guide
             </a>
         </div>
     </div>
