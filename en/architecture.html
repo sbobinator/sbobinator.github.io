@@ -11,13 +11,13 @@ permalink: /en/architecture/
     <div class="max-w-7xl mx-auto px-6 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-16">
             <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-purple/10 border-l-2 border-brand-purple text-brand-purple text-xs font-mono font-bold uppercase mb-6">
-                SYS_ARCH // SBOBINATOR
+                YOUR FIRST HOUR
             </div>
             <h1 class="text-5xl md:text-7xl font-black font-display mb-6 text-gray-900 dark:text-white uppercase tracking-tighter">
-                The Engine <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-purple to-brand-pink">Room.</span>
+                Start Fast, <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-purple to-brand-pink">Stay Calm.</span>
             </h1>
             <p class="text-xl text-gray-600 dark:text-gray-400 font-mono text-sm leading-relaxed">
-                Curious how it works under the hood? Sbobinator is a desktop app with a browser interface: you upload files, a background process transcribes them on your PC, and you download the results. No cloud required for the core job.
+                This page is for adoption confidence in your first hour, not for infrastructure deep dives. Marco, Giulia, Luca, and Sara all follow the same conversion path: install once, upload one real file, let it run, and download usable output. If your concern is setup difficulty, this journey keeps each step explicit and testable. If your concern is quality, privacy, long recordings, or whether free is real, the fastest answer is a direct first run.
             </p>
         </div>
 
@@ -26,38 +26,38 @@ permalink: /en/architecture/
             <div class="grid md:grid-cols-5 gap-4 items-center font-mono text-xs">
                 <div class="bg-[#111] border border-brand-purple/40 p-6 text-center rounded-xl">
                     <i class="fas fa-desktop text-2xl text-brand-purple mb-3"></i>
-                    <div class="text-white font-bold uppercase mb-1">Browser</div>
-                    <div class="text-gray-500">FastAPI :8501</div>
+                    <div class="text-white font-bold uppercase mb-1">Upload</div>
+                    <div class="text-gray-500">Pick one real recording</div>
                 </div>
                 <div class="hidden md:flex justify-center text-brand-purple text-2xl"><i class="fas fa-arrow-right"></i></div>
                 <div class="bg-[#111] border border-brand-pink/40 p-6 text-center rounded-xl">
                     <i class="fas fa-database text-2xl text-brand-pink mb-3"></i>
-                    <div class="text-white font-bold uppercase mb-1">SQLite</div>
-                    <div class="text-gray-500">jobs + progress</div>
+                    <div class="text-white font-bold uppercase mb-1">Wait</div>
+                    <div class="text-gray-500">Continue your normal work</div>
                 </div>
                 <div class="hidden md:flex justify-center text-brand-pink text-2xl"><i class="fas fa-arrow-right"></i></div>
                 <div class="bg-[#111] border border-green-500/40 p-6 text-center rounded-xl">
                     <i class="fas fa-cogs text-2xl text-green-500 mb-3"></i>
-                    <div class="text-white font-bold uppercase mb-1">Worker</div>
-                    <div class="text-gray-500">claim → pipeline</div>
+                    <div class="text-white font-bold uppercase mb-1">Download</div>
+                    <div class="text-gray-500">Use text and subtitles now</div>
                 </div>
             </div>
             <div class="grid md:grid-cols-3 gap-4 mt-8">
                 <div class="bg-[#111] border border-white/10 p-5 rounded-xl text-center">
-                    <div class="text-yellow-500 font-bold uppercase mb-1">ffmpeg</div>
-                    <div class="text-gray-500">extract + chunk audio</div>
+                    <div class="text-yellow-500 font-bold uppercase mb-1">Step 1</div>
+                    <div class="text-gray-500">Install and launch once</div>
                 </div>
                 <div class="bg-[#111] border border-white/10 p-5 rounded-xl text-center">
-                    <div class="text-green-500 font-bold uppercase mb-1">NeMo Parakeet</div>
-                    <div class="text-gray-500">local ASR inference</div>
+                    <div class="text-green-500 font-bold uppercase mb-1">Step 2</div>
+                    <div class="text-gray-500">Try your first file tonight</div>
                 </div>
                 <div class="bg-[#111] border border-white/10 p-5 rounded-xl text-center">
-                    <div class="text-brand-gold font-bold uppercase mb-1">LLM (opt-in)</div>
-                    <div class="text-gray-500">cloud API or Qwen</div>
+                    <div class="text-brand-gold font-bold uppercase mb-1">Step 3</div>
+                    <div class="text-gray-500">Repeat weekly with confidence</div>
                 </div>
             </div>
             <div class="absolute bottom-6 left-6 right-6">
-                <p class="text-white/60 font-mono text-xs uppercase tracking-widest">Fig 1. High-Level Pipeline Topology</p>
+                <p class="text-white/60 font-mono text-xs uppercase tracking-widest">Fig 1. First-Hour Adoption Flow</p>
             </div>
         </div>
     </div>
@@ -66,34 +66,34 @@ permalink: /en/architecture/
 <!-- Tech Stack Section -->
 <section class="py-24 bg-gray-50 dark:bg-brand-surface transition-colors border-b border-gray-200 dark:border-white/10">
     <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-3xl font-black font-display mb-16 text-center text-gray-900 dark:text-white uppercase tracking-tighter">Core Technologies</h2>
+        <h2 class="text-3xl font-black font-display mb-16 text-center text-gray-900 dark:text-white uppercase tracking-tighter">What You Stop Worrying About</h2>
 
         <div class="grid md:grid-cols-3 gap-8">
             <div class="bg-white dark:bg-brand-dark p-8 rounded-3xl border border-gray-200 dark:border-white/10 hover:border-brand-purple transition-all group">
                 <div class="w-14 h-14 bg-green-500/10 rounded-2xl flex items-center justify-center text-green-500 mb-6 group-hover:scale-110 transition-transform">
                     <i class="fas fa-microchip text-2xl"></i>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">NeMo Parakeet</h3>
+                <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">Install Anxiety</h3>
                 <p class="text-gray-600 dark:text-gray-400 text-sm">
-                    NVIDIA's TDT 0.6B v3 model delivers Italian-first speech recognition with segment timestamps. Loaded once per worker process, it runs on CPU for accessibility or CUDA when you need faster turnaround on long archives.
+                    You do not need to overthink setup for days before testing anything. The first milestone is practical: run one known recording and check whether the output is useful for your real work. Marco and Sara both adopt faster when success is measured by one completed file, not by reading endless documentation.
                 </p>
             </div>
             <div class="bg-white dark:bg-brand-dark p-8 rounded-3xl border border-gray-200 dark:border-white/10 hover:border-brand-pink transition-all group">
                 <div class="w-14 h-14 bg-brand-pink/10 rounded-2xl flex items-center justify-center text-brand-pink mb-6 group-hover:scale-110 transition-transform">
                     <i class="fas fa-bolt text-2xl"></i>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">FastAPI + HTMX</h3>
+                <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">Long File Stress</h3>
                 <p class="text-gray-600 dark:text-gray-400 text-sm">
-                    A lightweight operator UI without a heavy SPA. Upload forms, job lists, and per-job progress pages poll the server for live updates. Jinja2 templates keep the stack simple to deploy and audit.
+                    Giulia and Luca do not work with perfect short clips, so reliability on long recordings is a core adoption requirement. Confidence grows when the process keeps moving while they handle other tasks, then returns usable text later. Long audio becomes routine work instead of a special-case headache.
                 </p>
             </div>
             <div class="bg-white dark:bg-brand-dark p-8 rounded-3xl border border-gray-200 dark:border-white/10 hover:border-brand-purple transition-all group">
                 <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition-transform">
                     <i class="fab fa-docker text-2xl"></i>
                 </div>
-                <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">Docker Compose</h3>
+                <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">Privacy and Cost Doubt</h3>
                 <p class="text-gray-600 dark:text-gray-400 text-sm">
-                    Package UI and worker for headless Linux mini PCs. The ASR model can be baked into the image; local Qwen downloads at startup when RAM allows. Default port mapping <code>8502:8501</code> for home-lab use.
+                    Many users hesitate because they fear hidden cost escalation or unclear data handling. Adoption accelerates when personal use is clearly free and files stay under your control by default. That clarity removes the two most common reasons people postpone trying transcription tools.
                 </p>
             </div>
         </div>
@@ -107,24 +107,24 @@ permalink: /en/architecture/
 
             <div>
                 <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-pink/10 border-l-2 border-brand-pink text-brand-pink text-xs font-mono font-bold uppercase mb-6">
-                    WORKER_DAEMON // V1.0
+                    ADOPTION FAQ // FIRST HOUR
                 </div>
-                <h2 class="text-4xl font-black font-display mb-6 text-gray-900 dark:text-white uppercase tracking-tighter">The Background Worker.</h2>
+                <h2 class="text-4xl font-black font-display mb-6 text-gray-900 dark:text-white uppercase tracking-tighter">Questions That Usually Block Starting.</h2>
                 <p class="text-gray-600 dark:text-gray-400 mb-6">
-                    NeMo cannot safely load inside the web server's request thread on Windows — so transcription runs in a dedicated worker process. It claims the next queued job, executes the full pipeline, and loops until stopped.
+                    Adoption succeeds when the first concerns are answered in plain language, not buried in technical detail. "Can my PC handle this?" is resolved by running one representative file tonight instead of guessing from benchmarks. "Will Italian output be good enough?" is resolved the same way: test with your own meeting, interview, episode, or lecture and decide from direct evidence. "Can I trust it with long recordings?" becomes clear when you see that you can let processing run and come back to results instead of babysitting every minute.
                 </p>
                 <p class="text-gray-600 dark:text-gray-400 mb-6">
-                    On startup the worker recovers orphaned <code>running</code> jobs and reconciles disk folders with SQLite — so a crash mid-transcription does not leave your history in an inconsistent state.
+                    Privacy and licensing concerns are also adoption blockers, especially when users have been burned by unclear cloud terms before. Here, the core workflow is intentionally simple and low-risk: install, test, evaluate, repeat. If your output is useful, keep going; if not, you have still learned quickly without long lock-in. This is exactly why Marco, Giulia, Luca, and Sara can adopt based on results instead of promises.
                 </p>
                 <ul class="space-y-4 mb-8">
                     <li class="flex items-center gap-3 text-gray-900 dark:text-white font-medium">
-                        <i class="fas fa-redo text-brand-purple"></i> Orphan recovery on boot
+                        <i class="fas fa-redo text-brand-purple"></i> "Can I install this tonight?" -> Yes, follow quickstart and run one file.
                     </li>
                     <li class="flex items-center gap-3 text-gray-900 dark:text-white font-medium">
-                        <i class="fas fa-folder-open text-brand-pink"></i> Disk ↔ database reconcile
+                        <i class="fas fa-folder-open text-brand-pink"></i> "Will long files break my day?" -> No, process and return later.
                     </li>
                     <li class="flex items-center gap-3 text-gray-900 dark:text-white font-medium">
-                        <i class="fas fa-layer-group text-green-500"></i> Chunked ASR for long files
+                        <i class="fas fa-layer-group text-green-500"></i> "Is free personal use real?" -> Yes, clearly stated and immediate.
                     </li>
                 </ul>
             </div>
@@ -134,20 +134,20 @@ permalink: /en/architecture/
                     <div class="w-3 h-3 rounded-full bg-red-500"></div>
                     <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
                     <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                    <span class="ml-4 text-xs text-gray-500 font-mono">worker.py</span>
+                    <span class="ml-4 text-xs text-gray-500 font-mono">Tuesday_Morning.txt</span>
                 </div>
                 <div class="p-6 overflow-x-auto text-sm font-mono leading-relaxed text-gray-300">
-<pre><code><span class="text-brand-pink">while not</span> _stop_event.is_set():
-    job = claim_next_job()
-    <span class="text-brand-pink">if</span> job <span class="text-brand-pink">is</span> <span class="text-brand-purple">None</span>:
-        _stop_event.wait(poll_interval)
-        <span class="text-brand-pink">continue</span>
+<pre><code><span class="text-gray-500">Before adoption</span>
+Marco postpones recap emails because notes are incomplete.
+Giulia delays captions and feels pressure near publish time.
+Luca spends extra hours replaying interview audio for quotes.
+Sara avoids reviewing long lectures because manual replay is exhausting.
 
-    logger.info(<span class="text-yellow-300">"Processing job %s"</span>, job.id)
-  <span class="text-brand-pink">try</span>:
-        run_pipeline(job.id)
-  <span class="text-brand-pink">except</span> Exception:
-        logger.exception(<span class="text-yellow-300">"Job %s failed"</span>, job.id)</code></pre>
+<span class="text-gray-500">After first-hour adoption</span>
+Each person uploads one real recording and moves on with work.
+Processing completes while other tasks continue in parallel.
+Transcript and subtitle outputs become reusable working assets.
+The new routine becomes weekly because it saves real time.</code></pre>
                 </div>
             </div>
 
@@ -160,24 +160,24 @@ permalink: /en/architecture/
     <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
     <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
         <h2 class="text-5xl md:text-6xl font-black font-display mb-6 text-white uppercase tracking-tighter">
-            Deploy The <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-purple to-brand-pink">Stack.</span>
+            Install Tonight, <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-purple to-brand-pink">Use It Tomorrow.</span>
         </h2>
         <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
-            Windows install for daily use, Docker for an always-on mini PC, MkDocs for the full operator manual. Start with transcription — add summaries when you need them.
+            If you have reached this point, do not wait for a perfect moment. Open quickstart, process one real file, and measure whether your next recap, episode, article, or study session becomes easier. That single test is the conversion event that matters. Technical note for transparency: one local speech model powers the core transcription path.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="https://github.com/sbobinator/sbobinator" target="_blank" rel="noopener"
                 class="px-8 py-4 bg-white text-gray-900 font-bold rounded-full hover:scale-105 transition-transform flex items-center justify-center gap-3">
                 <i class="fab fa-github text-xl"></i>
-                View Source Code
+                Install Tonight
             </a>
-            <a href="/docs/deployment/docker/"
+            <a href="/docs/getting-started/quickstart/"
                 class="px-8 py-4 border border-white/20 text-white font-bold rounded-full hover:bg-white/10 transition-all flex items-center justify-center gap-3">
-                Docker Deployment Guide
+                Try Your First File
             </a>
             <a href="/en/strategies/"
                 class="px-8 py-4 border border-white/20 text-white font-bold rounded-full hover:bg-white/10 transition-all flex items-center justify-center gap-3">
-                Explore Modules
+                Read Persona Scenarios
             </a>
         </div>
     </div>
