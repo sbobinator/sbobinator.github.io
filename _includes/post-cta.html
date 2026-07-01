@@ -26,7 +26,7 @@
                 class="px-8 py-4 bg-white text-black rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
                 <i class="fab fa-github mr-2"></i> Vai su GitHub
             </a>
-            <a href="{% if page.lang == 'it' %}{{ site.cta.docs_url }}/{% else %}{{ site.cta.docs_url }}/en/{% endif %}"
+            <a href="{% include docs_href.html %}"
                 class="px-8 py-4 bg-white/10 text-white border border-white/20 rounded-xl font-bold text-lg hover:bg-white/20 transition-all backdrop-blur-sm">
                 <i class="fas fa-book mr-2"></i> Leggi la Documentazione
             </a>
@@ -44,7 +44,7 @@
                 class="px-8 py-4 bg-white text-black rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
                 <i class="fab fa-github mr-2"></i> View on GitHub
             </a>
-            <a href="{% if page.lang == 'it' %}{{ site.cta.docs_url }}/{% else %}{{ site.cta.docs_url }}/en/{% endif %}"
+            <a href="{% include docs_href.html %}"
                 class="px-8 py-4 bg-white/10 text-white border border-white/20 rounded-xl font-bold text-lg hover:bg-white/20 transition-all backdrop-blur-sm">
                 <i class="fas fa-book mr-2"></i> Read the Docs
             </a>

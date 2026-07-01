@@ -38,6 +38,11 @@ cta:
   github_url: "https://github.com/sbobinator/sbobinator"
   docs_url: "https://sbobinator.github.io/docs"
 
+# MkDocs i18n (folder): English at /docs/, Italian at /docs/it/
+docs:
+  base_en: "/docs/"
+  base_it: "/docs/it/"
+
 popup:
   url: "https://github.com/sbobinator/sbobinator"
   en:
