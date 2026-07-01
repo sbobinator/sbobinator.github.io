@@ -5,39 +5,232 @@ lang: en
 permalink: /en/strategies/
 ---
 
+<!-- Hero Section -->
 <section class="relative pt-32 pb-20 overflow-hidden bg-brand-dark border-b border-white/10 bg-grid-pattern">
     <div class="absolute inset-0 bg-brand-dark/90 transition-colors"></div>
     <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
         <div class="inline-flex items-center gap-2 px-3 py-1 bg-green-500/10 border border-green-500/30 text-green-500 text-xs font-mono font-bold uppercase mb-6">
             <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-            PRODUCT MODULES
+            PIPELINE ACTIVE
         </div>
-        <h1 class="text-6xl lg:text-7xl font-black font-display mb-6 text-white uppercase tracking-tighter">Core<br><span class="text-brand-purple">Features.</span></h1>
+        <h1 class="text-6xl lg:text-7xl font-black font-display mb-6 text-white uppercase tracking-tighter">Core<br><span class="text-brand-purple">Modules.</span></h1>
         <p class="text-xl text-gray-400 mb-12 font-mono text-sm max-w-2xl mx-auto">
-            Transcription, exports, job history, and optional LLM summaries — one operator workflow.
+            Three pillars — local ASR, durable job queue, optional LLM summaries — orchestrated into one operator workflow for Italian audio and video.
         </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-left font-mono">
+            <div class="bg-[#111] border border-white/10 p-6">
+                <div class="text-[10px] text-gray-500 uppercase mb-2">ASR Model</div>
+                <div class="text-3xl font-black text-green-500">~2.5 GB</div>
+            </div>
+            <div class="bg-[#111] border border-white/10 p-6">
+                <div class="text-[10px] text-gray-500 uppercase mb-2">Export Formats</div>
+                <div class="text-3xl font-black text-white">TXT + SRT</div>
+            </div>
+            <div class="bg-[#111] border border-white/10 p-6">
+                <div class="text-[10px] text-gray-500 uppercase mb-2">Web UI Port</div>
+                <div class="text-3xl font-black text-brand-purple">8501</div>
+            </div>
+            <div class="bg-[#111] border border-white/10 p-6">
+                <div class="text-[10px] text-gray-500 uppercase mb-2">Docker Map</div>
+                <div class="text-3xl font-black text-brand-pink">8502</div>
+            </div>
+        </div>
     </div>
 </section>
 
-<section class="py-24 px-6 bg-white dark:bg-[#0a0a0a] border-b border-gray-200 dark:border-white/10">
-    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
-        <div class="card-glow p-10 bg-gray-50 dark:bg-[#111] border border-gray-200 dark:border-white/10">
-            <h2 class="text-2xl font-black font-display uppercase mb-4 text-gray-900 dark:text-white">Web UI</h2>
-            <p class="text-gray-500 font-mono text-sm leading-relaxed">Upload files, watch progress, download TXT/SRT, configure summary providers, manage license acknowledgment.</p>
-        </div>
-        <div class="card-glow p-10 bg-gray-50 dark:bg-[#111] border border-gray-200 dark:border-white/10">
-            <h2 class="text-2xl font-black font-display uppercase mb-4 text-gray-900 dark:text-white">CLI</h2>
-            <p class="text-gray-500 font-mono text-sm leading-relaxed"><code>sbobina transcribe</code>, <code>sbobina ui</code>, batch-friendly for scripts and automation.</p>
-        </div>
-        <div class="card-glow p-10 bg-gray-50 dark:bg-[#111] border border-gray-200 dark:border-white/10">
-            <h2 class="text-2xl font-black font-display uppercase mb-4 text-gray-900 dark:text-white">Docker</h2>
-            <p class="text-gray-500 font-mono text-sm leading-relaxed">UI + worker in Compose for Linux mini PCs. Default mapping <code>8502:8501</code>.</p>
-        </div>
-        <div class="card-glow p-10 bg-gray-50 dark:bg-[#111] border border-gray-200 dark:border-white/10">
-            <h2 class="text-2xl font-black font-display uppercase mb-4 text-gray-900 dark:text-white">Summaries</h2>
-            <p class="text-gray-500 font-mono text-sm leading-relaxed">Cloud APIs or local Qwen. Detailed and executive modes. Fully optional.</p>
+<!-- Module 1: Parakeet ASR -->
+<section class="py-32 px-6 bg-white dark:bg-[#0a0a0a] border-b border-gray-200 dark:border-white/10 transition-colors relative">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+            <div>
+                <div class="text-sm font-mono text-brand-purple font-bold uppercase tracking-widest mb-4">Module_01</div>
+                <h2 class="text-5xl font-black font-display text-gray-900 dark:text-white uppercase tracking-tight mb-6">Parakeet ASR</h2>
+                <p class="text-gray-600 dark:text-gray-400 mb-8 font-mono text-sm leading-relaxed border-l-2 border-brand-purple pl-4">
+                    The transcription engine. NVIDIA NeMo Parakeet TDT 0.6B v3 runs entirely on your hardware — Italian-first, EU multilingual capable, with timestamped segments for subtitle export. Long files are split into chunks, transcribed sequentially, and deduplicated at boundaries.
+                </p>
+                <div class="space-y-4 mb-8 text-sm text-gray-500 font-mono">
+                    <div class="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
+                        <span>Model</span>
+                        <span class="text-gray-900 dark:text-white font-bold">parakeet-tdt-0.6b-v3</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
+                        <span>Runtime</span>
+                        <span class="text-green-500 font-bold">CPU or CUDA</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
+                        <span>Input</span>
+                        <span class="text-gray-900 dark:text-white font-bold">MP4, MKV, WAV, MP3…</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
+                        <span>Pre-process</span>
+                        <span class="text-gray-900 dark:text-white font-bold">ffmpeg → mono WAV</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-[#111] border border-brand-purple/30 p-6 rounded shadow-2xl">
+                <div class="text-[10px] text-gray-500 uppercase font-mono mb-4 border-b border-white/10 pb-2">src/sbobinator/transcribe.py</div>
+                <div class="font-mono text-xs text-gray-300 whitespace-pre overflow-x-auto">
+<span class="text-brand-pink">def</span> <span class="text-brand-purpleLight">transcribe</span>(input_path, config, work_dir, on_progress):
+    model = _get_model(config)
+    wav_path, _ = prepare_audio(input_path, work_dir=work_dir)
+    duration = get_duration_sec(wav_path)
+
+    <span class="text-brand-pink">if</span> duration <= config.chunk_threshold_sec:
+        <span class="text-brand-pink">return</span> _transcribe_file(model, wav_path)
+
+    chunks = split_audio_chunks(wav_path, chunk_dir, config.chunk_length_sec)
+    <span class="text-brand-pink">for</span> i, chunk <span class="text-brand-pink">in</span> enumerate(chunks):
+        on_progress(<span class="text-yellow-500">"transcribe"</span>, pct, <span class="text-yellow-500">f"chunk {i+1}/{len(chunks)}"</span>)
+        partial = _transcribe_file(model, chunk)
+        segments.extend(partial.segments)
+
+    <span class="text-brand-pink">return</span> TranscriptResult(segments=segments, text=_merge_text(segments))
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-{% include post-cta.html %}
+<!-- Module 2: Job Queue -->
+<section class="py-32 px-6 bg-gray-50 dark:bg-[#111] border-b border-gray-200 dark:border-white/10 transition-colors relative">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+            <div class="order-2 lg:order-1">
+                <div class="bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-brand-pink/30 p-6 rounded shadow-2xl">
+                    <div class="text-[10px] text-gray-500 uppercase font-mono mb-4 border-b border-gray-200 dark:border-white/10 pb-2">Job State Matrix</div>
+                    <table class="w-full font-mono text-xs text-left">
+                        <thead class="text-gray-400 border-b border-gray-200 dark:border-white/10">
+                            <tr>
+                                <th class="py-2">State</th>
+                                <th class="py-2">Meaning</th>
+                                <th class="py-2">UI</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-600 dark:text-gray-300">
+                            <tr class="border-b border-gray-100 dark:border-white/5">
+                                <td class="py-3 text-yellow-500">queued</td>
+                                <td class="py-3">Waiting for worker</td>
+                                <td class="py-3">/jobs list</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 dark:border-white/5">
+                                <td class="py-3 text-brand-purple">running</td>
+                                <td class="py-3">ASR in progress</td>
+                                <td class="py-3">live HTMX poll</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 dark:border-white/5">
+                                <td class="py-3 text-green-500">done</td>
+                                <td class="py-3">Artifacts on disk</td>
+                                <td class="py-3">download TXT/SRT</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 text-red-500">failed</td>
+                                <td class="py-3">Error logged</td>
+                                <td class="py-3">reprocess</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="order-1 lg:order-2">
+                <div class="text-sm font-mono text-brand-pink font-bold uppercase tracking-widest mb-4">Module_02</div>
+                <h2 class="text-5xl font-black font-display text-gray-900 dark:text-white uppercase tracking-tight mb-6">Job Queue</h2>
+                <p class="text-gray-600 dark:text-gray-400 mb-8 font-mono text-sm leading-relaxed border-l-2 border-brand-pink pl-4">
+                    Not a one-shot upload dialog. Sbobinator tracks every file in SQLite, shows live progress per job, keeps history at <code>/jobs</code>, and lets you reprocess or delete entries. On startup the worker recovers orphaned runs and reconciles missing folders with the database.
+                </p>
+                <div class="space-y-4 mb-8 text-sm text-gray-500 font-mono">
+                    <div class="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
+                        <span>Storage</span>
+                        <span class="text-gray-900 dark:text-white font-bold">SQLite + data/output/</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
+                        <span>Worker</span>
+                        <span class="text-brand-pink font-bold">subprocess / Docker</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
+                        <span>Detail page</span>
+                        <span class="text-gray-900 dark:text-white font-bold">/jobs/{id}</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
+                        <span>Batch</span>
+                        <span class="text-gray-900 dark:text-white font-bold">multi-file upload</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Module 3: LLM Summary -->
+<section class="py-32 px-6 bg-white dark:bg-[#0a0a0a] border-b border-gray-200 dark:border-white/10 transition-colors relative">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+            <div>
+                <div class="text-sm font-mono text-brand-gold font-bold uppercase tracking-widest mb-4">Module_03</div>
+                <h2 class="text-5xl font-black font-display text-gray-900 dark:text-white uppercase tracking-tight mb-6">LLM Summary</h2>
+                <p class="text-gray-600 dark:text-gray-400 mb-8 font-mono text-sm leading-relaxed border-l-2 border-brand-gold pl-4">
+                    When you need more than raw transcript text. Configure a provider in the web UI — DeepSeek, OpenAI, Claude, Gemini, Kimi for speed, or download Qwen for a fully offline summary step. Executive and detailed modes adapt the prompt to meetings, interviews, or long-form content.
+                </p>
+                <div class="space-y-4 mb-8 text-sm text-gray-500 font-mono">
+                    <div class="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
+                        <span>Settings</span>
+                        <span class="text-gray-900 dark:text-white font-bold">/settings/summary</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
+                        <span>Cloud</span>
+                        <span class="text-brand-gold font-bold">your API keys</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
+                        <span>Local Qwen</span>
+                        <span class="text-gray-900 dark:text-white font-bold">RAM ≥ 16 GB</span>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-200 dark:border-white/5 pb-2">
+                        <span>Default</span>
+                        <span class="text-green-500 font-bold">disabled</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-[#111] border border-brand-gold/30 p-6 rounded shadow-2xl">
+                <div class="text-[10px] text-gray-500 uppercase font-mono mb-4 border-b border-white/10 pb-2">CLI with summary</div>
+                <div class="font-mono text-xs text-gray-300 whitespace-pre overflow-x-auto">
+<span class="text-gray-500"># Transcription only — no cloud</span>
+sbobina transcribe meeting.mp4 -o data/output
+
+<span class="text-gray-500"># Optional cloud summary (your key)</span>
+sbobina transcribe podcast.wav -s \
+  --summary-provider deepseek
+
+<span class="text-gray-500"># Web UI: configure once, queue many jobs</span>
+sbobina ui
+<span class="text-gray-500"># → http://localhost:8501/jobs</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to action -->
+<section class="py-32 px-6 bg-[#0a0a0a] text-white relative overflow-hidden transition-colors bg-grid-pattern">
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+        <h2 class="text-5xl lg:text-6xl font-black font-display mb-6 uppercase tracking-tight">See It In Action.</h2>
+        <p class="text-xl text-gray-400 mb-10 font-mono">Install locally, queue your first file, and explore the architecture behind each module.</p>
+
+        <div class="flex justify-center gap-4 flex-wrap">
+            <a href="https://github.com/sbobinator/sbobinator" target="_blank" rel="noopener"
+                class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-black font-bold font-mono hover:bg-brand-purple hover:text-white transition-colors">
+                <i class="fab fa-github"></i> GITHUB_REPO
+            </a>
+            <a href="/en/architecture/"
+                class="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 text-white font-bold font-mono hover:bg-[#111] transition-colors">
+                <i class="fas fa-sitemap"></i> SYSTEM_ARCHITECTURE
+            </a>
+            <a href="/en/about/"
+                class="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 text-white font-bold font-mono hover:bg-[#111] transition-colors">
+                <i class="fas fa-arrow-left"></i> READ_PHILOSOPHY
+            </a>
+        </div>
+    </div>
+</section>

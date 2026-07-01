@@ -1,6 +1,11 @@
 <!-- Accordion FAQ -->
+{% if page.lang == 'it' %}
+  {% assign faqs = site.faq_it %}
+{% else %}
+  {% assign faqs = site.faq_en %}
+{% endif %}
 <div class="space-y-4" id="faqAccordion">
-    {% for faq in site.faq %}
+    {% for faq in faqs %}
     <details
         class="group bg-white dark:bg-neutral-800 border border-gray-100 dark:border-white/5 rounded-[2rem] p-6 hover:shadow-md transition-all cursor-pointer">
         <summary class="flex justify-between items-center font-bold text-xl list-none select-none">
