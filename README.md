@@ -2,7 +2,7 @@
 
 Official landing site for **Sbobinator** — local Italian audio/video transcription with NVIDIA NeMo Parakeet.
 
-Built with **Jekyll** (same layout as [cryptoquantix.github.io](https://github.com/CryptoQuantix/cryptoquantix.github.io)) and deployed on GitHub Pages.
+Built with **Jekyll** and deployed on GitHub Pages.
 
 ## Local preview
 
