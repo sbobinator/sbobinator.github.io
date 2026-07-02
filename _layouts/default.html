@@ -5,8 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
     <title>{{ page.title | default: site.title }}</title>
+    <link rel="icon" href="/assets/images/logo/favicon.svg" type="image/svg+xml">
     <link rel="icon" type="image/x-icon" href="/assets/images/logo/favicon.ico">
-    <link rel="apple-touch-icon" href="/assets/images/logo/logo-transparent.png">
+    <link rel="apple-touch-icon" href="/assets/images/logo/favicon.svg">
     {% include seo.html %}
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <script>
@@ -16,23 +17,25 @@
                 extend: {
                     fontFamily: {
                         sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-                        display: ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
+                        display: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
                     },
                     colors: {
                         brand: {
-                            purple: '#0ea5e9', // Changed to Sky Blue for Crypto
+                            purple: '#0284c7',
                             purpleLight: '#38bdf8',
-                            pink: '#10b981', // Changed to Emerald Green for Crypto
-                            pinkLight: '#34d399',
-                            gold: '#F59E0B',
-                            dark: '#0D0D0F',
-                            surface: '#18181B',
-                            muted: '#71717A',
-                            // keep compat aliases
-                            blue: '#0ea5e9',
-                            green: '#10b981',
-                            black: '#0D0D0F',
-                            gray: '#18181B',
+                            pink: '#0ea5e9',
+                            pinkLight: '#7dd3fc',
+                            gold: '#38bdf8',
+                            dark: '#0f172a',
+                            surface: '#1e293b',
+                            muted: '#94a3b8',
+                            ink: '#0f172a',
+                            paper: '#f0f4ff',
+                            blue: '#0284c7',
+                            green: '#38bdf8',
+                            black: '#0f172a',
+                            gray: '#1e293b',
                         }
                     },
                     borderRadius: {
@@ -57,8 +60,8 @@
                             '100%': { transform: 'translateX(-100%)' },
                         },
                         glowPulse: {
-                            '0%, 100%': { boxShadow: '0 0 20px rgba(14, 165, 233, 0.4)' },
-                            '50%': { boxShadow: '0 0 60px rgba(14, 165, 233, 0.8), 0 0 120px rgba(16, 185, 129, 0.3)' },
+                            '0%, 100%': { boxShadow: '0 0 20px rgba(56, 189, 248, 0.35)' },
+                            '50%': { boxShadow: '0 0 60px rgba(56, 189, 248, 0.65), 0 0 100px rgba(2, 132, 199, 0.25)' },
                         }
                     }
                 },
@@ -66,13 +69,14 @@
         }
     </script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&family=Space+Grotesk:wght@400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', system-ui, sans-serif;
             -webkit-font-smoothing: antialiased;
+            letter-spacing: -0.01em;
         }
 
         h1,
@@ -81,7 +85,8 @@
         h4,
         h5,
         h6 {
-            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-family: 'Inter', system-ui, sans-serif;
+            letter-spacing: -0.02em;
         }
 
         /* Scroll Reveal Classes */
@@ -154,11 +159,11 @@
 
         /* Neon glow utilities */
         .glow-purple {
-            box-shadow: 0 0 15px rgba(14, 165, 233, 0.3), inset 0 0 10px rgba(14, 165, 233, 0.1);
+            box-shadow: 0 0 15px rgba(2, 132, 199, 0.25), inset 0 0 10px rgba(56, 189, 248, 0.08);
         }
 
         .glow-pink {
-            box-shadow: 0 0 15px rgba(16, 185, 129, 0.3), inset 0 0 10px rgba(16, 185, 129, 0.1);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.25), inset 0 0 10px rgba(56, 189, 248, 0.08);
         }
 
         .text-glow {
@@ -178,19 +183,19 @@
         /* Grid background pattern */
         .bg-grid-pattern {
             background-size: 40px 40px;
-            background-image: 
-                linear-gradient(to right, rgba(14, 165, 233, 0.05) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(14, 165, 233, 0.05) 1px, transparent 1px);
+            background-image:
+                linear-gradient(to right, rgba(2, 132, 199, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(2, 132, 199, 0.04) 1px, transparent 1px);
         }
         .dark .bg-grid-pattern {
-            background-image: 
-                linear-gradient(to right, rgba(14, 165, 233, 0.1) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(14, 165, 233, 0.1) 1px, transparent 1px);
+            background-image:
+                linear-gradient(to right, rgba(56, 189, 248, 0.08) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(56, 189, 248, 0.08) 1px, transparent 1px);
         }
 
-        /* Gradient text */
+        /* Gradient text — brand sky */
         .gradient-text {
-            background: linear-gradient(135deg, #0ea5e9 0%, #10b981 100%);
+            background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -198,10 +203,10 @@
 
         /* Code block styles */
         .code-block {
-            background: #0a0a0a;
-            border: 1px solid rgba(14, 165, 233, 0.3);
+            background: #0f172a;
+            border: 1px solid rgba(56, 189, 248, 0.25);
             border-radius: 4px;
-            font-family: 'Courier New', monospace;
+            font-family: ui-monospace, 'Courier New', monospace;
             font-size: 0.875rem;
             color: #38bdf8;
             padding: 1.5rem;
@@ -209,11 +214,11 @@
         }
 
         .code-block .comment {
-            color: #71717a;
+            color: #94a3b8;
         }
 
         .code-block .cmd {
-            color: #34d399;
+            color: #7dd3fc;
         }
 
         .code-block .str {
@@ -248,13 +253,13 @@
         /* Card hover glow */
         .card-glow {
             transition: all 0.3s ease;
-            border: 1px solid rgba(14, 165, 233, 0.2);
+            border: 1px solid rgba(2, 132, 199, 0.15);
             border-radius: 0.5rem;
         }
 
         .card-glow:hover {
-            border-color: rgba(14, 165, 233, 0.6);
-            box-shadow: inset 0 0 20px rgba(14, 165, 233, 0.05), 0 0 20px rgba(14, 165, 233, 0.2);
+            border-color: rgba(56, 189, 248, 0.45);
+            box-shadow: inset 0 0 20px rgba(56, 189, 248, 0.04), 0 0 20px rgba(56, 189, 248, 0.12);
             transform: translateY(-2px);
         }
 
@@ -264,12 +269,20 @@
         }
 
         ::-webkit-scrollbar-track {
-            background: #0D0D0F;
+            background: #0f172a;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #0ea5e9;
+            background: #0284c7;
             border-radius: 0px;
+        }
+
+        .dark ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+
+        .dark ::-webkit-scrollbar-thumb {
+            background: #38bdf8;
         }
 
         .loading-dots:after {
