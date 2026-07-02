@@ -17,7 +17,7 @@ permalink: /en/architecture/
                 Your first hour, <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-purple to-brand-pink">minute by minute</span>
             </h1>
             <p class="text-xl text-gray-600 dark:text-gray-400 font-mono text-sm leading-relaxed">
-                This page is for adoption confidence in your first hour, not for infrastructure deep dives. Marco, Giulia, Luca, and Sara all follow the same conversion path: install once, upload one real file, let it run, and download usable output. If your concern is setup difficulty, this journey keeps each step explicit and testable. If your concern is quality, privacy, long recordings, or whether free is real, the fastest answer is a direct first run.
+                This page walks you through the first hour — not infrastructure deep dives. Upload a file, work runs in background, download usable output. The question isn't "how is it built inside" but "can I install tonight and use it tomorrow without friction?" Answer below.
             </p>
         </div>
 
@@ -57,7 +57,7 @@ permalink: /en/architecture/
                 </div>
             </div>
             <div class="absolute bottom-6 left-6 right-6">
-                <p class="text-white/60 font-mono text-xs uppercase tracking-widest">Fig 1. First-Hour Adoption Flow</p>
+                <p class="text-white/60 font-mono text-xs uppercase tracking-widest">Fig 1. First-hour flow — overview</p>
             </div>
         </div>
     </div>
@@ -75,7 +75,7 @@ permalink: /en/architecture/
                 </div>
                 <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">"Will it be readable in Italian?"</h3>
                 <p class="text-gray-600 dark:text-gray-400 text-sm">
-                    You do not need to overthink setup for days before testing anything. The first milestone is practical: run one known recording and check whether the output is useful for your real work. Marco and Sara both adopt faster when success is measured by one completed file, not by reading endless documentation.
+                    The question isn't technical: "does it understand my everyday speech?" The answer is one real test — call, interview, episode, or lecture. If the text is useful right away, you already have your reason to keep it.
                 </p>
             </div>
             <div class="bg-white dark:bg-brand-dark p-8 rounded-3xl border border-gray-200 dark:border-white/10 hover:border-brand-pink transition-all group">
@@ -84,7 +84,7 @@ permalink: /en/architecture/
                 </div>
                 <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">"I'll get lost in the interface"</h3>
                 <p class="text-gray-600 dark:text-gray-400 text-sm">
-                    Giulia and Luca do not work with perfect short clips, so reliability on long recordings is a core adoption requirement. Confidence grows when the process keeps moving while they handle other tasks, then returns usable text later. Long audio becomes routine work instead of a special-case headache.
+                    You need to see clearly what's happening to your files, without complicated menus. Upload, check progress, download result. For Marco and Giulia: less operational friction. For Luca and Sara: less time lost in unclear tools.
                 </p>
             </div>
             <div class="bg-white dark:bg-brand-dark p-8 rounded-3xl border border-gray-200 dark:border-white/10 hover:border-brand-purple transition-all group">
@@ -93,7 +93,7 @@ permalink: /en/architecture/
                 </div>
                 <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">"What about after the first file?"</h3>
                 <p class="text-gray-600 dark:text-gray-400 text-sm">
-                    Many users hesitate because they fear hidden cost escalation or unclear data handling. Adoption accelerates when personal use is clearly free and files stay under your control by default. That clarity removes the two most common reasons people postpone trying transcription tools.
+                    When the first test works, it becomes part of your routine. Process consistently without depending on pay-per-use services. Footer has a technical reference for anyone who wants to go deeper.
                 </p>
             </div>
         </div>
@@ -107,14 +107,14 @@ permalink: /en/architecture/
 
             <div>
                 <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-pink/10 border-l-2 border-brand-pink text-brand-pink text-xs font-mono font-bold uppercase mb-6">
-                    ADOPTION FAQ // FIRST HOUR
+                    FIRST-HOUR FAQ
                 </div>
                 <h2 class="text-4xl font-black font-display mb-6 text-gray-900 dark:text-white uppercase tracking-tighter">What changes from your first file</h2>
                 <p class="text-gray-600 dark:text-gray-400 mb-6">
-                    Adoption succeeds when the first concerns are answered in plain language, not buried in technical detail. "Can my PC handle this?" is resolved by running one representative file tonight instead of guessing from benchmarks. "Will Italian output be good enough?" is resolved the same way: test with your own meeting, interview, episode, or lecture and decide from direct evidence. "Can I trust it with long recordings?" becomes clear when you see that you can let processing run and come back to results instead of babysitting every minute.
+                    The first doubts get answered in plain language, not buried in technical detail. "Can my PC handle this?" — run one representative file tonight, don't guess from benchmarks. "Will Italian output be good enough?" — same: your meeting, interview, episode, or lecture. "Can I trust long recordings?" — start it, come back to results, no babysitting every minute.
                 </p>
                 <p class="text-gray-600 dark:text-gray-400 mb-6">
-                    Privacy and licensing concerns are also adoption blockers, especially when users have been burned by unclear cloud terms before. Here, the core workflow is intentionally simple and low-risk: install, test, evaluate, repeat. If your output is useful, keep going; if not, you have still learned quickly without long lock-in. This is exactly why Marco, Giulia, Luca, and Sara can adopt based on results instead of promises.
+                    Privacy and licensing block people too, especially after unclear cloud terms. Here the core workflow stays simple and low-risk: install, test, evaluate, repeat. If the output helps, keep going; if not, you learned fast without lock-in. Marco, Giulia, Luca, and Sara decide from results, not promises.
                 </p>
                 <ul class="space-y-4 mb-8">
                     <li class="flex items-center gap-3 text-gray-900 dark:text-white font-medium">
@@ -137,13 +137,13 @@ permalink: /en/architecture/
                     <span class="ml-4 text-xs text-gray-500 font-mono">Tuesday_Morning.txt</span>
                 </div>
                 <div class="p-6 overflow-x-auto text-sm font-mono leading-relaxed text-gray-300">
-<pre><code><span class="text-gray-500">Before adoption</span>
+<pre><code><span class="text-gray-500">Before</span>
 Marco postpones recap emails because notes are incomplete.
 Giulia delays captions and feels pressure near publish time.
 Luca spends extra hours replaying interview audio for quotes.
 Sara avoids reviewing long lectures because manual replay is exhausting.
 
-<span class="text-gray-500">After first-hour adoption</span>
+<span class="text-gray-500">After first file</span>
 Each person uploads one real recording and moves on with work.
 Processing completes while other tasks continue in parallel.
 Transcript and subtitle outputs become reusable working assets.
@@ -163,7 +163,7 @@ The new routine becomes weekly because it saves real time.</code></pre>
             Your first file is <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-purple to-brand-pink">waiting</span>
         </h2>
         <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
-            If you have reached this point, do not wait for a perfect moment. Open quickstart, process one real file, and measure whether your next recap, episode, article, or study session becomes easier. That single test is the conversion event that matters. Technical note for transparency: one local speech model powers the core transcription path.
+            If you've read this far, don't wait for a perfect moment. Open quickstart, process one real file, and see if your next recap, episode, article, or study session gets easier. That single test is what matters. Technical note: one local speech model powers the core transcription path.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="https://github.com/sbobinator/sbobinator" target="_blank" rel="noopener"
