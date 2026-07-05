@@ -1,0 +1,41 @@
+{% if page.migration_target %}
+<link rel="canonical" href="{{ page.migration_target }}">
+<meta http-equiv="refresh" content="5;url={{ page.migration_target }}">
+{% endif %}
+
+<section class="relative min-h-[70vh] flex items-center pt-32 pb-20 overflow-hidden bg-grid-pattern">
+    <div class="absolute inset-0 bg-white/90 dark:bg-brand-dark/90 transition-colors"></div>
+
+    <div class="max-w-3xl mx-auto px-6 w-full relative z-10 text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-none bg-amber-500/10 border-l-4 border-amber-500 text-xs font-mono tracking-widest uppercase mb-8 text-amber-700 dark:text-amber-300">
+            {% if page.lang == 'it' %}Pagina migrata{% else %}Page moved{% endif %}
+        </div>
+
+        <h1 class="text-4xl lg:text-5xl font-black mb-6 font-display text-gray-900 dark:text-white uppercase tracking-tighter">
+            {% if page.lang == 'it' %}
+            Sbobinator → <span class="text-brand-purple">Qwibo</span>
+            {% else %}
+            Sbobinator → <span class="text-brand-purple">Qwibo</span>
+            {% endif %}
+        </h1>
+
+        <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+            {% if page.lang == 'it' %}
+            Questa pagina non è più aggiornata. Trovi la versione corrente sul sito Qwibo.
+            {% else %}
+            This page is no longer maintained. Find the current version on the Qwibo website.
+            {% endif %}
+        </p>
+
+        {% if page.migration_target %}
+        <a href="{{ page.migration_target }}"
+            class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-purple text-white font-bold font-mono text-sm hover:bg-brand-pink transition-colors">
+            <i class="fas fa-arrow-right"></i>
+            {% if page.lang == 'it' %}Continua su Qwibo{% else %}Continue on Qwibo{% endif %}
+        </a>
+        <p class="mt-6 text-sm text-gray-500">
+            {% if page.lang == 'it' %}Reindirizzamento automatico tra pochi secondi…{% else %}Automatic redirect in a few seconds…{% endif %}
+        </p>
+        {% endif %}
+    </div>
+</section>

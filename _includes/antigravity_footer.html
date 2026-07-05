@@ -3,23 +3,23 @@
     <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start gap-12">
 
         <div class="max-w-sm">
-            <a href="{{ '/' | relative_url }}{% if page.lang == 'it' %}it/{% else %}en/{% endif %}"
+            <a href="https://qwibo.github.io{% if page.lang == 'it' %}/it/{% else %}/en/{% endif %}"
                 class="inline-block mb-6 hover:opacity-90 transition-opacity">
-                <img src="/assets/images/logo/logo-horizontal-dark.svg?v=3" alt="Sbobinator"
+                <img src="/assets/images/logo/logo-horizontal-dark.svg?v=3" alt="Sbobinator → Qwibo"
                     class="h-10 w-auto object-contain">
             </a>
             <p class="text-gray-500 mb-2 text-sm font-bold uppercase tracking-widest">
                 {% if page.lang == 'it' %}
-                Trascrizione Audio & Video
+                Sbobinator → Qwibo
                 {% else %}
-                Audio & Video Transcription
+                Sbobinator → Qwibo
                 {% endif %}
             </p>
             <p class="text-gray-600 text-sm mb-6">
                 {% if page.lang == 'it' %}
-                Riunioni, podcast, interviste e lezioni in testo e sottotitoli — sul tuo PC, senza costi al minuto. Gratuito per uso personale.
+                Questo sito è archiviato e reindirizza al nuovo progetto <strong class="text-gray-400">Qwibo</strong> — stessa trascrizione locale in italiano, nuovo nome e repository.
                 {% else %}
-                Meetings, podcasts, interviews, and lectures into text and subtitles — on your PC, no per-minute fees. Free for personal use.
+                This site is archived and redirects to the new <strong class="text-gray-400">Qwibo</strong> project — same local Italian transcription, new name and repository.
                 {% endif %}
             </p>
             <div class="flex flex-col sm:flex-row gap-6">
@@ -28,7 +28,7 @@
                         {% if page.lang == 'it' %}Progetto{% else %}Project{% endif %}
                     </p>
                     <div class="flex gap-2">
-                        <a href="https://github.com/sbobinator/sbobinator" target="_blank" rel="noopener"
+                        <a href="https://github.com/qwibo/qwibo" target="_blank" rel="noopener"
                             class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brand-purple hover:border-brand-purple transition-all text-gray-400 hover:text-white"
                             title="GitHub">
                             <i class="fab fa-github"></i>
@@ -54,19 +54,19 @@
                     %}Prodotto{% else %}Product{% endif %}</h4>
                 <ul class="space-y-3 text-sm text-gray-500">
                     <li>
-                        <a href="{% if page.lang == 'it' %}/it/about/{% else %}/en/about/{% endif %}"
+                        <a href="https://qwibo.github.io{% if page.lang == 'it' %}/it/about/{% else %}/en/about/{% endif %}"
                             class="hover:text-brand-purple transition-colors">
                             {% if page.lang == 'it' %}Chi Siamo{% else %}About{% endif %}
                         </a>
                     </li>
                     <li>
-                        <a href="{% if page.lang == 'it' %}/it/strategies/{% else %}/en/strategies/{% endif %}"
+                        <a href="https://qwibo.github.io{% if page.lang == 'it' %}/it/strategies/{% else %}/en/strategies/{% endif %}"
                             class="hover:text-brand-purple transition-colors">
                             {% if page.lang == 'it' %}Funzionalità{% else %}Features{% endif %}
                         </a>
                     </li>
                     <li>
-                        <a href="{% if page.lang == 'it' %}/it/architecture/{% else %}/en/architecture/{% endif %}"
+                        <a href="https://qwibo.github.io{% if page.lang == 'it' %}/it/architecture/{% else %}/en/architecture/{% endif %}"
                             class="hover:text-brand-purple transition-colors">
                             {% if page.lang == 'it' %}Architettura{% else %}Architecture{% endif %}
                         </a>
@@ -77,7 +77,7 @@
                 <h4 class="font-bold mb-4 text-white text-sm uppercase tracking-wider">{% if page.lang == 'it' %}Risorse{% else %}Resources{% endif %}</h4>
                 <ul class="space-y-3 text-sm text-gray-500">
                     <li>
-                        <a href="https://github.com/sbobinator/sbobinator" target="_blank" rel="noopener"
+                        <a href="https://github.com/qwibo/qwibo" target="_blank" rel="noopener"
                             class="hover:text-brand-purple transition-colors flex items-center gap-2">
                             <i class="fab fa-github text-xs"></i>
                             GitHub Repo
@@ -101,7 +101,7 @@
                             class="hover:text-brand-purple transition-colors">Antonio Trento</a>
                     </li>
                     <li>
-                        <a href="{% if page.lang == 'it' %}/it/legal/{% else %}/en/legal/{% endif %}"
+                        <a href="https://qwibo.github.io{% if page.lang == 'it' %}/it/legal/{% else %}/en/legal/{% endif %}"
                             class="hover:text-brand-purple transition-colors">
                             {% if page.lang == 'it' %}Licenza & Disclaimer{% else %}License & Disclaimer{% endif %}
                         </a>
@@ -120,9 +120,9 @@
         </p>
         <p class="text-center md:text-right max-w-lg">
             {% if page.lang == 'it' %}
-            I tuoi file restano sul tuo PC. Installa una volta, prova con un file vero.
+            Sbobinator è diventato Qwibo — aggiorna segnalibri e link a <strong class="text-gray-500">qwibo.github.io</strong>.
             {% else %}
-            Your files stay on your PC. Install once, try one real file.
+            Sbobinator is now Qwibo — update bookmarks and links to <strong class="text-gray-500">qwibo.github.io</strong>.
             {% endif %}
         </p>
     </div>

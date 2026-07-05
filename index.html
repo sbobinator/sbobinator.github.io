@@ -4,27 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sbobinator — Italian Audio & Video Transcription</title>
+    <title>Sbobinator → Qwibo</title>
+    <link rel="canonical" href="https://qwibo.github.io/">
     <script>
         (function () {
             var lang = navigator.language || navigator.userLanguage;
-            if (lang.startsWith('it')) {
-                window.location.replace('/it/');
+            if (lang && lang.toLowerCase().startsWith('it')) {
+                window.location.replace('https://qwibo.github.io/it/');
             } else {
-                window.location.replace('/en/');
+                window.location.replace('https://qwibo.github.io/en/');
             }
         })();
     </script>
-    <meta http-equiv="refresh" content="0;url=/en/">
+    <meta http-equiv="refresh" content="0;url=https://qwibo.github.io/en/">
 </head>
 
 <body
-    style="background-color: #000; color: #fff; display: flex; align-items: center; justify-content: center; height: 100vh; font-family: sans-serif;">
-    <div style="text-align: center;">
-        <p>Redirecting to Sbobinator...</p>
+    style="background-color: #0f172a; color: #fff; display: flex; align-items: center; justify-content: center; height: 100vh; font-family: system-ui, sans-serif;">
+    <div style="text-align: center; max-width: 28rem; padding: 1.5rem;">
+        <p style="font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: #fbbf24; margin-bottom: 1rem;">
+            Sbobinator → Qwibo
+        </p>
+        <p style="margin-bottom: 1rem;">Redirecting to the new Qwibo website…</p>
+        <p style="font-size: 0.875rem; color: #94a3b8; margin-bottom: 1.5rem;">
+            Reindirizzamento al nuovo sito Qwibo…
+        </p>
         <p>
-            <a href="/en/" style="color: #4a90e2;">English</a> |
-            <a href="/it/" style="color: #4a90e2;">Italiano</a>
+            <a href="https://qwibo.github.io/en/" style="color: #38bdf8;">English</a>
+            &nbsp;·&nbsp;
+            <a href="https://qwibo.github.io/it/" style="color: #38bdf8;">Italiano</a>
         </p>
     </div>
 </body>

@@ -1,0 +1,78 @@
+<section class="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-grid-pattern">
+    <div class="absolute inset-0 bg-white/90 dark:bg-brand-dark/90 transition-colors"></div>
+
+    <div class="max-w-4xl mx-auto px-6 w-full relative z-10 text-center">
+        <div class="reveal active">
+            <div
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-none bg-amber-500/10 border-l-4 border-amber-500 text-xs font-mono tracking-widest uppercase mb-8 text-amber-700 dark:text-amber-300">
+                <span class="w-2 h-2 rounded-none bg-amber-500 animate-pulse"></span>
+                {% if page.lang == 'it' %}Sbobinator → Qwibo{% else %}Sbobinator → Qwibo{% endif %}
+            </div>
+
+            <h1 class="text-5xl lg:text-6xl font-black leading-[0.95] mb-6 font-display text-gray-900 dark:text-white uppercase tracking-tighter">
+                {% if page.lang == 'it' %}
+                Sbobinator<br>
+                <span class="text-brand-purple">ora si chiama</span><br>
+                <span class="text-brand-pink">Qwibo.</span>
+                {% else %}
+                Sbobinator<br>
+                <span class="text-brand-purple">is now</span><br>
+                <span class="text-brand-pink">Qwibo.</span>
+                {% endif %}
+            </h1>
+
+            <p class="text-lg text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                {% if page.lang == 'it' %}
+                Stesso prodotto — trascrizione audio e video in italiano sul tuo PC, locale e privata — con un nuovo nome, un nuovo sito e un repository aggiornato. Tutto lo sviluppo attivo è su <strong>Qwibo</strong>.
+                {% else %}
+                Same product — local, private Italian audio and video transcription on your PC — with a new name, website, and repository. All active development is on <strong>Qwibo</strong>.
+                {% endif %}
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <a href="https://qwibo.github.io{% if page.lang == 'it' %}/it/{% else %}/en/{% endif %}"
+                    class="flex items-center justify-center gap-2 px-8 py-4 bg-brand-purple text-white font-bold font-mono text-sm hover:bg-brand-pink transition-colors border border-transparent">
+                    <i class="fas fa-arrow-right"></i>
+                    {% if page.lang == 'it' %}Vai al nuovo sito{% else %}Go to the new site{% endif %}
+                </a>
+                <a href="https://github.com/qwibo/qwibo" target="_blank" rel="noopener"
+                    class="flex items-center justify-center gap-2 px-8 py-4 bg-gray-900 dark:bg-white text-white dark:text-black font-bold font-mono text-sm hover:bg-brand-purple dark:hover:bg-brand-purple dark:hover:text-white transition-colors border border-transparent">
+                    <i class="fab fa-github"></i>
+                    {% if page.lang == 'it' %}Repository Qwibo{% else %}Qwibo repository{% endif %}
+                </a>
+            </div>
+
+            <div class="grid sm:grid-cols-3 gap-4 text-left max-w-3xl mx-auto">
+                <a href="https://qwibo.github.io/docs/{% if page.lang == 'it' %}it/{% endif %}"
+                    class="block p-5 border border-gray-200 dark:border-white/10 bg-white/50 dark:bg-white/5 hover:border-brand-purple/40 transition-colors">
+                    <div class="text-brand-purple font-bold font-mono text-xs uppercase mb-2">Docs</div>
+                    <div class="text-sm text-gray-600 dark:text-gray-400">
+                        {% if page.lang == 'it' %}Guida installazione e uso{% else %}Install and usage guide{% endif %}
+                    </div>
+                </a>
+                <a href="https://github.com/qwibo/qwibo/releases" target="_blank" rel="noopener"
+                    class="block p-5 border border-gray-200 dark:border-white/10 bg-white/50 dark:bg-white/5 hover:border-brand-purple/40 transition-colors">
+                    <div class="text-brand-pink font-bold font-mono text-xs uppercase mb-2">Release</div>
+                    <div class="text-sm text-gray-600 dark:text-gray-400">
+                        {% if page.lang == 'it' %}Installer Windows (alpha){% else %}Windows installer (alpha){% endif %}
+                    </div>
+                </a>
+                <a href="https://github.com/qwibo/qwibo-docker" target="_blank" rel="noopener"
+                    class="block p-5 border border-gray-200 dark:border-white/10 bg-white/50 dark:bg-white/5 hover:border-brand-purple/40 transition-colors">
+                    <div class="text-gray-900 dark:text-white font-bold font-mono text-xs uppercase mb-2">Docker</div>
+                    <div class="text-sm text-gray-600 dark:text-gray-400">
+                        {% if page.lang == 'it' %}Deploy self-hosted{% else %}Self-hosted deploy{% endif %}
+                    </div>
+                </a>
+            </div>
+
+            <p class="mt-12 text-sm text-gray-500 dark:text-gray-500 max-w-xl mx-auto">
+                {% if page.lang == 'it' %}
+                Questo dominio (<code class="text-brand-purple">sbobinator.github.io</code>) resta attivo solo per reindirizzare chi arriva da link vecchi. Segnalibri e clone Git: aggiorna a <strong>qwibo</strong>.
+                {% else %}
+                This domain (<code class="text-brand-purple">sbobinator.github.io</code>) stays online only to redirect visitors from old links. Update bookmarks and Git clones to <strong>qwibo</strong>.
+                {% endif %}
+            </p>
+        </div>
+    </div>
+</section>

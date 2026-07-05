@@ -1,7 +1,15 @@
-title: "Sbobinator"
-description: "Hai una registrazione? Trasformala in testo e sottotitoli sul tuo PC. Privato, gratuito per uso personale, zero costi al minuto."
+title: "Sbobinator → Qwibo"
+description: "Sbobinator è diventato Qwibo. Stesso prodotto di trascrizione locale in italiano — nuovo sito su qwibo.github.io e repository github.com/qwibo/qwibo."
 baseurl: ""
 url: "https://sbobinator.github.io"
+
+migration:
+  legacy_name: "Sbobinator"
+  new_name: "Qwibo"
+  new_site: "https://qwibo.github.io"
+  new_repo: "https://github.com/qwibo/qwibo"
+  new_docs_en: "https://qwibo.github.io/docs/"
+  new_docs_it: "https://qwibo.github.io/docs/it/"
 
 author:
   name: "Antonio Trento"
@@ -63,28 +71,27 @@ faq_it:
     answer: "Scegli un file che ti importa — non uno stress test, uno vero. Caricalo, attendi, leggi l'output, cerca una frase che ricordi di aver detto. Se funziona, accoda il resto del backlog. È un cambio di abitudine, non un tour delle funzioni."
 
 social:
-  github: "https://github.com/sbobinator/sbobinator"
+  github: "https://github.com/qwibo/qwibo"
   twitter: "https://x.com/antoniotrento"
 
 cta:
-  github_url: "https://github.com/sbobinator/sbobinator"
-  docs_url: "https://sbobinator.github.io/docs"
+  github_url: "https://github.com/qwibo/qwibo"
+  docs_url: "https://qwibo.github.io/docs"
 
-# MkDocs i18n (folder): English at /docs/, Italian at /docs/it/
 docs:
-  base_en: "/docs/"
-  base_it: "/docs/it/"
+  base_en: "https://qwibo.github.io/docs/"
+  base_it: "https://qwibo.github.io/docs/it/"
 
 popup:
-  url: "https://github.com/sbobinator/sbobinator"
+  url: "https://qwibo.github.io"
   en:
-    title: "Got a recording to transcribe?"
-    body: "Install tonight, upload one real file, get text and subtitles on your PC. No per-minute fees, no forced upload."
-    button: "Install Tonight"
+    title: "Sbobinator is now Qwibo"
+    body: "This site redirects to the new Qwibo website and repository. Same local transcription product."
+    button: "Go to Qwibo"
   it:
-    title: "Hai una registrazione da sbobinare?"
-    body: "Installa stasera, carica un file vero, ottieni testo e sottotitoli sul tuo PC. Zero costi al minuto, niente upload obbligatorio."
-    button: "Installa Stasera"
+    title: "Sbobinator è diventato Qwibo"
+    body: "Questo sito reindirizza al nuovo sito e repository Qwibo. Stesso prodotto di trascrizione locale."
+    button: "Vai a Qwibo"
 
 permalink: "/:categories/:title/"
 markdown: kramdown
